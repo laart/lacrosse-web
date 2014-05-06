@@ -1,0 +1,30 @@
+tr:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Yeni Ekle Achievement
+            reorder: Tekrar sirala Achievements
+            reorder_done: Tekrar siralama tamamlandiAchievements
+          records:
+            title: Achievements
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Achievements yok henuz.  Tikla "Yeni Ekle Achievement" eklemek senin ilk achievement.
+          achievement:
+            view_live_html: Bunu canlu achievement goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle achievement
+            delete: Bunu Sil achievement sonsuza dek
+      achievements:
+        show:
+          other: Diger Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

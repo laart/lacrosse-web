@@ -1,0 +1,50 @@
+<%= form_for [refinery, :events_admin, @event] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @event,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :title -%>
+    <%= f.text_field :title, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :start_time -%>
+    <%= f.datetime_select :start_time -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :end_time -%>
+    <%= f.datetime_select :end_time -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :all_day -%>
+    <%=f.check_box :all_day %>
+  </div>
+
+
+  <div class="field">
+    <%= f.select :event_type, options_for_select(Refinery::Events::Event::EVENT_TYPES) %>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:description],
+                :object => "events/event" -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.events.admin.events.event'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @event.title) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

@@ -1,0 +1,17 @@
+/* new_player admin form style */
+form.new_player{
+	text-align: center;
+}
+form.new_player .player-tab-parts{
+	text-align: center;
+}
+form.new_player ul.player-info-tabs li{
+	width: 100px;
+	display: inline-block;
+	float: none;
+}
+
+input.text-field-small{
+	width: 50px;
+	text-align: center;
+}

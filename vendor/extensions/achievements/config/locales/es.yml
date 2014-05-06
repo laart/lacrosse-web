@@ -1,0 +1,31 @@
+es:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+#        article: masculino/femenino
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Crear nuevo achievement
+            reorder: Reordenar achievements
+            reorder_done: Reordenación de achievements completada
+          records:
+            title: Achievements
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay achievements todavía. Pulsa en "Crear nuevo Achievement" para crear tu primer achievement.
+          achievement:
+            view_live_html: Ver este achievement como abierto al público <br/><em>(abre en ventana nueva)</em>
+            edit: Editar este achievement
+            delete: Borrar este achievement para siempre
+      achievements:
+        show:
+          other: Otros achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

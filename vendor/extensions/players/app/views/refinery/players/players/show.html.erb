@@ -1,0 +1,83 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <header class="single-post-header clearfix">
+            <h2 class="post-title"><%= @player.name %> <%= @player.surname %></h2>
+          </header>
+          <div class="post-content">
+
+            <div class="cold-md-4 player-info-left">
+              <%= image_fu(@player.photo, "300x", class: "player-photo-thumbnail") %>
+            </div>
+
+            <div class="cold-md-4 player-info-right">
+              <div class=""><p>Vārds:</p><h4><%=raw @player.name %></h4></div>
+              <div><p>Uzvārds:</p><h4><%=raw @player.surname %></h4></div>
+              <div><p>E-pasts:</p><h4><%=raw @player.email %></h4></div>
+              <div><p>Vecums:</p><h4><%=raw @player.age %></h4></div>
+              <div><p>Pozīcija:</p><h4><%=raw @player.position %></h4></div>
+              <div><p>Nummurs:</p><h4><%=raw @player.number %></h4></div>
+              <div><p>Augums:</p><h4><%=raw @player.height %></h4></div>
+              <div><p>Pilsēta:</p><h4><%=raw @player.city %></h4></div>
+
+
+              <div class="player-social-links"><p>Sazinies:</p>
+
+                <% if !@player.twitter.blank? %>
+                  <%= link_to url_with_protocol(@player.twitter), :target => "_blank" do %>
+                    <i class="fa fa-twitter-square fa-3x player-social-icons"></i>
+                  <% end %>
+                <% end %>
+
+                <% if !@player.facebook.blank? %>
+                  <%= link_to url_with_protocol(@player.facebook), :target => "_blank" do %>
+                    <i class="fa fa-facebook-square fa-3x player-social-icons"></i>
+                  <% end %>
+                <% end %>
+
+                <% if !@player.draugiem.blank? %>
+                  <%= link_to url_with_protocol(@player.draugiem), :target => "_blank" do %>
+                    <i class="fa fa-square fa-3x player-social-icons"></i>
+                  <% end %>
+                <% end %>
+
+                <% if !@player.googleplus.blank? %>
+                  <%= link_to url_with_protocol(@player.googleplus), :target => "_blank" do %>
+                    <i class="fa fa-google-plus-square fa-3x player-social-icons"></i>
+                  <% end %>
+                <% end %>
+
+              </div>
+            </div>
+            <hr>
+
+            <h3>Spēlētāja apraksts</h3>
+            <p><%= raw @player.description %></p>
+
+          </div>
+
+          <%= render '/refinery/content_page' %>
+
+        </div>
+
+        <!-- Start Sidebar -->
+        <div class="col-md-4 sidebar">
+          <!-- Photo Gallery Widget -->
+          <div class="widget-gallery widget">
+            <div class="sidebar-widget-title">
+              <h3><%= t('.other') %></h3>
+            </div>
+              <ul>
+                <% @players.each do |player| %>
+                  <%= link_to image_tag(player.photo.thumbnail(geometry: "80x80#c").url, class: "img-thumbnail"), refinery.players_player_path(player) %>
+                <% end %>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>  

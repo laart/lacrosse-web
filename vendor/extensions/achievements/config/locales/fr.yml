@@ -1,0 +1,30 @@
+fr:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Achievement
+            reorder: Réordonner les Achievements
+            reorder_done: Fin de réordonnancement des Achievements
+          records:
+            title: Achievements
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Achievement. Cliquer sur "Créer un(e) nouve(au/l/lle) Achievement" pour créer votre premi(er/ère) achievement.'
+          achievement:
+            view_live_html: Voir ce(t/tte) achievement <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) achievement
+            delete: Supprimer définitivement ce(t/tte) achievement
+      achievements:
+        show:
+          other: Autres Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

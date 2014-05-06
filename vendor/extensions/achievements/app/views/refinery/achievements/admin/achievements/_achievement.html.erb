@@ -1,0 +1,20 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(achievement) -%>">
+  <span class='title'>
+    <%= achievement.tournament %>
+
+  </span>
+  <span class='actions'>
+    
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.achievements_achievement_path(achievement),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_achievements_admin_achievement_path(achievement),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.achievements_admin_achievement_path(achievement),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => achievement.tournament),
+        :method => :delete %>
+  </span>
+</li>

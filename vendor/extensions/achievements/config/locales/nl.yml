@@ -1,0 +1,30 @@
+nl:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Nieuwe Achievement toevoegen
+            reorder: De volgorde van de Achievements wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Achievement-volgorde
+          records:
+            title: Achievements
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Achievements. Druk op 'Nieuwe Achievement toevoegen' om de eerste toe te voegen.
+          achievement:
+            view_live_html: Deze achievement op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze achievement
+            delete: Deze achievement definitief verwijderen
+      achievements:
+        show:
+          other: Andere Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

@@ -1,0 +1,56 @@
+<aside id="comments">
+  <section class="post-comments" id="comments">
+    <% if (comments = @post.comments.approved).any? %>
+      <h3><i class="fa fa-comment"></i> <%= t('title', :scope => 'refinery.blog.posts.show.comments') %>
+      (<%= @post.comments.approved.count %>)
+      </h3>  
+      <%= render :partial => "comment", :collection => comments %>
+    <% end %>
+  </section>
+
+  <% if Refinery::Blog::Post.comments_allowed? %>
+
+    <% flash.each do |key, value| %>
+      <div id='flash' class="flash flash_<%= key %>">
+        <%= value %>
+      </div>
+    <% end %>
+
+    <section class="post-comment-form">
+      <h3><i class="fa fa-share"></i> <%= t('add', :scope => 'refinery.blog.posts.show.comments') %></h3>
+      <%= form_for [refinery, :blog, @comment] do |f| %>
+        <%= render "/refinery/admin/error_messages",
+                         :object => f.object,
+                         :include_object_name => true %>
+
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-4 col-sm-4">
+              <%= f.text_field :name, placeholder: "Your name", class: "form-control input-lg" %>
+            </div>
+            <div class="col-md-4 col-sm-4">
+              <%= f.text_field :email, placeholder: "Your email", class: "form-control input-lg" %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-12">
+              <%= f.text_area :message, placeholder: "Your comment", size: "8x4", class: "form-control input-lg" %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <div class="col-md-12">
+              <%= f.submit t('submit', :scope => 'refinery.blog.posts.show'), class: "btn btn-primary btn-lg" %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </section>
+  <% end %>
+
+</aside>
+
+

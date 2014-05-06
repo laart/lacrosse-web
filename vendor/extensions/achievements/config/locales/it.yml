@@ -1,0 +1,30 @@
+it:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Aggiungi Nuovo Achievement
+            reorder: Riordina Achievements
+            reorder_done: Termina il Riordino di Achievements
+          records:
+            title: Achievements
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Achievements. Clicca "Aggiungi Nuovo Achievement" per aggiungere il tuo primo achievement.
+          achievement:
+            view_live_html: Guarda live questo achievement <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo achievement
+            delete: Rimuovi per sempre questo achievement
+      achievements:
+        show:
+          other: Altri Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

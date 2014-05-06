@@ -1,0 +1,36 @@
+<% if post.live? %>
+    <article class="blog_post post" id="<%= dom_id(post) %>">
+      <div class="row">
+        <div class="col-md-4 col-sm-4">
+          <%= link_to(image_fu(post.featured_image, "600x400", :class => 'img-thumbnail'), refinery.blog_post_path(post)) %>
+         </div>
+        <div class="col-md-8 col-sm-8">      
+          <h3><%= link_to post.title, refinery.blog_post_path(post) %></h3>
+          <span class="post-meta meta-data"> <span><i class="fa fa-calendar"></i><%= l(post.published_at.to_date, :format => :long) %></span>
+
+          <% if (categories = post.categories.translated).any? %>
+            <span><i class="fa fa-archive"></i><%=raw categories.collect { |category| link_to category.title, refinery.blog_category_path(category) }.to_sentence %></span>
+          <% end %>
+
+          <% if Refinery::Blog::Post.comments_allowed? %>
+            <span><i class="fa fa-comment"></i> <%= link_to post.comments.approved.count, refinery.blog_post_path(post) << '#comments' %></span>
+          <% end %>
+          </span><!-- post-meta meta-data -->      
+
+          <% if blog_post_teaser_enabled? %>
+            <%= blog_post_teaser(post) %>
+          <% else %>
+            <%= post.body.html_safe %>
+          <% end %>
+
+          <p>
+            <% if blog_post_teaser_enabled? && post.custom_teaser.present? %>
+              <%= link_to(refinery.blog_post_path(post), :class => 'btn btn-primary') do %>
+                Turpināt lasīt <i class="fa fa-long-arrow-right"></i>
+              <% end %>
+            <% end %>
+          </p>
+        </div><!-- col-md-8 col-sm-8 -->
+      </div><!-- row -->
+    </article>
+<% end %>

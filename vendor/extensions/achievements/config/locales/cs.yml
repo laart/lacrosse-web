@@ -1,0 +1,30 @@
+cs:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Přidat Achievement
+            reorder: Řadit Achievements
+            reorder_done: Konec řazení Achievements
+          records:
+            title: Achievements
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Achievements. Zvolte "Přidat Achievement" pro přidání prvního achievement.
+          achievement:
+            view_live_html: Zobrazit náhled achievement<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit achievement
+            delete: Smazat achievement
+      achievements:
+        show:
+          other: Další Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

@@ -1,0 +1,15 @@
+<article class='blog_comment_message' id='<%= "comment-#{comment.to_param}" %>'>
+  <ol class="comments">
+    <li>
+      <div class="post-comment-block">
+        <div class="img-thumbnail"> <%= image_tag avatar_url(comment.email), :alt => comment.name, :class => 'avatar' %> </div>
+        <h5><%= comment.name %> says</h5>
+        <span class="meta-data"><%= comment.created_at.to_formatted_s(:long) %></span>
+        <%#= t('time_ago', :scope => 'refinery.blog.posts.comments', :time => time_ago_in_words(comment.created_at)) %>
+        <p><%= simple_format auto_link(comment.message.to_s) %></p>
+      </div>
+    </li>
+  </ol>
+</article>
+
+              

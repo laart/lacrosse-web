@@ -1,0 +1,37 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+  
+        <header class="single-post-header clearfix gallery-title-center">
+          <h2 class="post-title"><%= @gallery.title %></h2>
+        </header>
+
+          <ul class="isotope-grid" data-sort-id="gallery">
+            <% @gallery.images.each do |image| %>
+              <li class="col-md-2 col-sm-4 grid-item post format-gallery">
+                <div class="grid-item-inner">
+                  <div class="media-box">
+                    <div class="flexslider">
+                      <ul class="slides">
+
+                        <li class="item">
+                          <%= link_to image_tag(image.thumbnail(geometry: "600x400#c").url), 
+                          image.url, "data-rel" => "prettyPhoto[#{@gallery.id}]", class: "media-box" %>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            <% end %>
+
+            <%= render '/refinery/content_page' %>
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
+

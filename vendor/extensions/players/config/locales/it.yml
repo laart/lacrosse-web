@@ -1,0 +1,35 @@
+it:
+  refinery:
+    plugins:
+      players:
+        title: Players
+    players:
+      admin:
+        players:
+          actions:
+            create_new: Aggiungi Nuovo Player
+            reorder: Riordina Players
+            reorder_done: Termina il Riordino di Players
+          records:
+            title: Players
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Players. Clicca "Aggiungi Nuovo Player" per aggiungere il tuo primo player.
+          player:
+            view_live_html: Guarda live questo player <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo player
+            delete: Rimuovi per sempre questo player
+      players:
+        show:
+          other: Altri Players
+  activerecord:
+    attributes:
+      'refinery/players/player':
+        name: Name
+        surname: Surname
+        email: Email
+        age: Age
+        position: Position
+        number: Number
+        height: Height
+        city: City
+        description: Description

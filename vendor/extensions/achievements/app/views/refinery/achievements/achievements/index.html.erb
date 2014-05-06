@@ -1,0 +1,36 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <ul class="timeline">
+
+      	<% @achievements.each do |achievement| %>
+
+
+          <li class="<%= cycle("", "timeline-inverted")%>">
+            <div class="timeline-badge"><%= achievement.date.strftime("%b") %><span><%= achievement.date.strftime("%Y") %></span></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h3 class="timeline-title"><%= achievement.tournament %></h3>
+              </div>
+              <div class="timeline-body">
+                  <ul class="info-table">
+                  	<li><i class="fa fa-trophy fa-2x"></i> <h3><%= achievement.place %>.vieta</h3></li>
+                    <li><i class="fa fa-calendar"></i> <%= achievement.date.strftime("%d %B, %Y") %></li>
+                    <li><i class="fa fa-map-marker"></i> <%= achievement.country %></li>
+                  <% unless achievement.description.blank? %>
+                    <li><i class="fa fa-info"></i> <%= raw achievement.description %></li>
+                  <% end %>
+                  </ul>
+              </div>
+            </div>
+          </li>
+
+        <% end %>
+
+        <%= render '/refinery/content_page' %>
+
+      </ul>
+    </div>
+  </div>
+</div>
+

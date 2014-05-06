@@ -1,0 +1,41 @@
+<% flash.each do |key, value| %>
+ <div id='flash' class="flash flash_<%= key %>">
+   <%= value %>
+ </div>
+<% end %>
+<article id="blog_post">
+
+  <header class="single-post-header clearfix">
+    <% if Refinery::Blog::Post.comments_allowed? %>
+      <div class="pull-right post-comments-count"><i class="fa fa-comment"></i>
+        <%= link_to @post.comments.approved.count, refinery.blog_post_path(@post) << '#comments' %>
+      </div>
+    <% end %>
+    <h2 class="post-title"><%= @post.title %></h2>
+  </header>
+
+  <article class="post-content"> 
+    <span class="post-meta meta-data">
+      <span><i class="fa fa-calendar"></i> 
+        <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :long)) %>
+      </span> 
+
+      <span><i class="fa fa-archive"></i>
+        <% if (categories = @post.categories).any? %>
+          <% categories.each_with_index do |category, index| %>
+            Categories: <%= link_to category.title, refinery.blog_category_path(category) -%><%= ',' if index < ((categories.length) - 1) %>
+          <% end %>
+        <% end %>
+      </span>
+    </span>
+
+      <div class="featured-image"> <%= image_fu(@post.featured_image, "800x600") %> </div>
+      <%= @post.body.html_safe %>
+
+  </article>
+
+  <% if Refinery::Blog::Post::ShareThis.enabled? %>
+    <span class="st_sharethis" displayText="ShareThis"></span>
+  <% end %>
+</article>
+<%= render '/refinery/draft_page_message' unless @post.nil? or @post.live? -%>

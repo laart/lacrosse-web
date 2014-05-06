@@ -1,0 +1,26 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+          <% if @posts.any? %>
+            <div class="col-md-9 posts-archive">
+              <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+              <%= will_paginate @posts %>
+            </div>
+          <% else %>
+            <p>
+              <%= t('.no_posts') %>
+            </p>
+          <% end %>
+
+        <div class="col-md-3 sidebar">
+          <div class="widget sidebar-widget">
+            <%= render "/refinery/blog/shared/categories" %>
+          </div>
+        </div>
+
+        </div><!-- row -->
+    </div><!-- container -->
+  </div><!-- content -->
+</div><!-- main -->
+

@@ -1,0 +1,25 @@
+    <div class="topbar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 col-xs-8">
+            <h1 class="logo"> <%= link_to image_tag("logo-small.png"), refinery.root_path %> </h1>
+          </div>
+          <div class="col-md-8 col-sm-6 col-xs-4">
+            <ul class="top-navigation hidden-sm hidden-xs">
+              <li><%= link_to "Kalendārs", refinery.events_events_path %></li>
+            </ul>
+            <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="main-menu-wrapper">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+
+                <%= navigation_menu.to_html %>
+
+          </div>
+        </div>
+      </div>
+    </div>

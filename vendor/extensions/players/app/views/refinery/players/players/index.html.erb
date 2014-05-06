@@ -1,0 +1,62 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+      	<h4 class="player-season">2014 sezona</h4>
+
+          <ul class="isotope-grid">
+
+          	<% @players.each do |player| %>
+
+	            <li class="col-md-2 col-sm-4 grid-item player-photos-list" id="player-<%= player.id %>">
+
+		            <div class="player-hover" id="player-<%= player.id %>">
+		            	<h5><%= player.name %></h5>
+		            	<h5><%= player.surname %></h5>
+		            	<%= link_to refinery.players_player_path(player) do %>
+		            		<i class="fa fa-search-plus fa-3x"></i>
+		            	<% end %>
+		            	<h2>#<%= player.number %></h2>
+		            </div>
+
+	              	<%= link_to image_tag(player.photo.thumbnail(geometry: "120x150#c").url, id: "player-#{player.id}", class: "player-photo-thumbnail"), refinery.players_player_path(player) %>
+
+	            </li>
+
+            <% end %>
+
+          </ul>
+
+
+
+        <div class="col-md-12">
+          <table class="table table-striped players-listed">
+            <thead>
+              <tr>
+                <th> #Nr. </th>
+                <th> Vārds </th>
+                <th> Uzvārds </th>
+                <th> Pozīcija </th>
+              </tr>
+            </thead>
+            <tbody>
+
+					    <% @players.each do |player| %>
+
+		              <tr>
+		                <td><%= player.number %></td>
+		                <td><%= link_to player.name, refinery.players_player_path(player) %></td>
+		                <td><%= player.surname %></td>
+		                <td><%= player.position %></td>
+		              </tr>
+
+		          <% end %>
+
+            </tbody>
+          </table>
+        </div>
+  		</div>
+  	</div>
+  </div>
+</div>
+<% javascript 'players' %>

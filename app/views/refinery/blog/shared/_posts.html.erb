@@ -1,0 +1,12 @@
+<% if @posts.many? %>
+  <div class="sidebar-widget-title">
+    <h3><%= t('.other') %></h3>
+  </div>
+  <ul id="blog_posts">
+    <% @posts.each do |blog_post| %>
+      <li class='clearfix'>
+        <%= link_to blog_post.title, refinery.blog_post_path(blog_post) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,137 @@
+/* ==================================================
+   Add your own style here. This file will overide properties described in any other css file.
+================================================== */
+.site-header h1.logo{
+	padding-top: 0px;
+} /* Logo padding fix */
+
+.breadcrumb > li + li:before{
+	padding: 0px;
+}
+.slash{
+	color: #d8d6d1;
+}
+
+.avatar{
+	width: 40px;
+	height: 40px;
+}
+
+label.error{
+	font-family: "Roboto", sans-serif;
+	position: absolute;
+	margin-top: -20px;
+	color: red;
+}
+
+h3.gallery-title{
+	color:#80276c;
+	text-align: center;
+	font-weight: normal;
+	font-size: 20px;
+}
+
+span.gallery-created-at{
+	color:#80276c;
+}
+
+table.players-listed thead{
+	background-color: #80276c;
+	color: #fff;
+}
+
+li.player-photos-list{
+	text-align: center;
+}
+
+img.player-photo-thumbnail{
+	background: #F8F7F3;
+	padding: 5px;
+	display: inline-block;
+	height: auto;
+	max-width: 100%;
+	line-height: 1.428571429;
+	background-color: #ffffff;
+	border: 1px solid #eceae4;
+	border-radius: 3px;
+}
+
+h4.player-season{
+	text-align: center;
+}
+
+.player-hover{
+	width: 120px;
+	height: 150px;
+	background-color: #000;
+	position: absolute;
+	margin: auto;
+	opacity: 0.7;
+	display: none;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.player-hover h2,
+.player-hover h5 {
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.player-info-left{
+	float: left;
+}
+
+.player-info-right{
+	float: left;
+	margin-left: 10px;
+}
+
+.player-info-right h4, .player-info-right p{
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.player-info-right p{
+	width: 78px;
+}
+.player-info-right h4{
+color: #80276c;
+}
+.player-info-right div{
+	margin-bottom: 8px;
+}
+
+.player-social-links{
+	margin-top: 10px;
+}
+.player-social-links a{
+	text-decoration: none;
+}
+
+i.player-social-icons{
+	margin-right: 10px;
+}
+
+.info-table li h3{
+	display: inline-block;
+	color:#80276c;
+}
+
+.info-table li p{
+	display: inline-block;
+}
+
+h4.homepage-galleries{
+	font-family: "Roboto", sans-serif;
+}
+
+header.gallery-title-center{
+	text-align: center;
+}
+
+/* FullCalendar event hover */
+.fc-event:hover{
+	cursor: pointer;
+}

@@ -1,0 +1,32 @@
+zh-CN:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: 建立新的 Achievement
+            reorder: 对 Achievements 重新排序
+            reorder_done: 对 Achievements 的重新排序结束
+          records:
+            title: Achievements
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Achievements yet. Click "Add New Achievement" to add your first achievement.
+            no_items_yet: 目前没有 Achievements . 点击 "Add New Achievement" 创建一个achievement.
+          achievement:
+            view_live_html: 查看 achievement 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 achievement
+            delete: 永久删除 achievement
+      achievements:
+        show:
+          other: 其他 Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

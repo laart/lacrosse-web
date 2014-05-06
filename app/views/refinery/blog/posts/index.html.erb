@@ -1,0 +1,20 @@
+  <div class="main" role="main">
+    <div id="content" class="content full">
+      <div class="container">
+        <div class="row">
+
+            <% if @posts.any? %>
+              <div class="col-md-9 posts-archive">
+                <%= render :partial => "/refinery/blog/shared/post", :collection => @posts %>
+                <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+              </div>
+            <% else %>
+              <p><%= t('.no_blog_articles_yet') %></p>
+            <% end %>
+
+          <%= render '/refinery/blog/shared/body_content_right' %>
+
+        </div><!-- row -->
+      </div><!-- container -->
+    </div><!-- content -->
+  </div><!-- main -->

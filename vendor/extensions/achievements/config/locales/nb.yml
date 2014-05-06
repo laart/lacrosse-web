@@ -1,0 +1,30 @@
+nb:
+  refinery:
+    plugins:
+      achievements:
+        title: Achievements
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Lag en ny Achievement
+            reorder: Endre rekkefølgen på Achievements
+            reorder_done: Ferdig å endre rekkefølgen Achievements
+          records:
+            title: Achievements
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Achievements enda. Klikk på "Lag en ny Achievement" for å legge til din første achievement.
+          achievement:
+            view_live_html: Vis hvordan denne achievement ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne achievement
+            delete: Fjern denne achievement permanent
+      achievements:
+        show:
+          other: Andre Achievements
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Tournament
+        country: Country
+        place: Place
+        description: Description

@@ -1,0 +1,25 @@
+<ul>
+  <% if ::Refinery::Achievements::Admin::AchievementsController.searchable? %>
+    <li>
+      <%= render '/refinery/admin/search', :url => refinery.achievements_admin_achievements_path %>
+    </li>
+  <% end %>
+  <li>
+    <%= link_to t('.create_new'), refinery.new_achievements_admin_achievement_path,
+                 :class => "add_icon" %>
+  </li>
+<% if !searching? && ::Refinery::Achievements::Admin::AchievementsController.sortable? && ::Refinery::Achievements::Achievement.many? %>
+  <li>
+    <%= link_to t('.reorder', :what => "Achievements"),
+                 refinery.achievements_admin_achievements_path,
+                 :id => "reorder_action",
+                 :class => "reorder_icon" %>
+
+    <%= link_to t('.reorder_done', :what => "Achievements"),
+                 refinery.achievements_admin_achievements_path,
+                 :id => "reorder_action_done",
+                 :style => "display: none;",
+                 :class => "reorder_icon" %>
+  </li>
+<% end %>
+</ul>
