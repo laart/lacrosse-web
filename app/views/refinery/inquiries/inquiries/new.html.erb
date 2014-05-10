@@ -1,0 +1,85 @@
+<% content_for :body do %>
+  <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+<% end %>
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+
+      <%= render "/refinery/content_page" %>
+
+      <div class="row">
+        <div class="col-md-9">
+
+          <header class="single-post-header clearfix">
+            <h2 class="post-title">Mūsu atrašanās vieta</h2>
+          </header>
+          <div class="post-content">
+            <div id="gmap">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2173.8627447653907!2d24.206725!3d56.985411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2b6f6b6e99d07cad!2sLatvijas+Sporta+pedagogijas+akademijas+Sporta+klubs!5e0!3m2!1sen!2slv!4v1399648216705" width="600" height="450" frameborder="0" style="border:0"></iframe>
+            </div>
+            <div class="row inquiries">
+              <%= form_for [refinery, :inquiries, @inquiry], :html => {:id => 'contact-form'} do |f| %>
+                <%= render :partial => "/refinery/admin/error_messages",
+                           :locals => {
+                             :object => @inquiry,
+                             :include_object_name => true,
+                           } %>
+
+                <div class="col-md-6 margin-15">
+                  <div class="form-group">
+                  <%= f.text_field :name, :class => 'text form-control input-lg', :required => 'required',
+                    :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+                  </div>
+                  <div class="form-group">
+                  <%= f.email_field :email, :class => 'text email form-control input-lg', :required => 'required',
+                    :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>                      
+                  </div>
+                <% if Refinery::Inquiries.show_phone_number_field %>
+                  <div class="form-group">
+                    <%= f.text_field :phone, :class => 'text phone form-control input-lg',
+                      :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+                  </div>
+                <% end %>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <%= f.text_area :message, :class => 'form-control input-lg', :cols => 6, :rows => 7, :required => 'required',
+                    :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>               
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <%= f.submit t('.send'), :class => 'btn btn-primary btn-lg pull-right' %>
+                </div>
+              <% end %> 
+            </div>
+          </div>          
+        </div>
+
+
+        <!-- Start Sidebar -->
+        <div class="col-md-3 sidebar"> 
+          <!-- Recent Posts Widget -->
+          <div class="widget-recent-posts widget">
+            <div class="sidebar-widget-title">
+              <h3>Kontakti</h3>
+            </div>
+            <ul>
+
+            <% @manager_contacts.each do |manager| %>
+              <li class="clearfix persons-contact">
+                <h5><%= manager.name %> <%= manager.surname %></h5><span class="meta-data"><%= manager.position %></span>
+                <p><i class="fa fa-phone"></i> +371 <%= manager.telephone_number %></p>
+                <p><i class="fa fa-envelope"></i> <%= manager.email %></p>      
+              </li>
+            <% end %>
+
+            </ul>
+          </div>
+        </div>
+   
+      </div>
+    </div>
+  </div>
+</div>

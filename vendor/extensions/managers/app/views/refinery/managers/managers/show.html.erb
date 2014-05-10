@@ -1,0 +1,63 @@
+<% content_for :body_content_title do %>
+  <%= @manager.name %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Name</h1>
+    <p>
+      <%=raw @manager.name %>
+    </p>
+  </section>
+  <section>
+    <h1>Surname</h1>
+    <p>
+      <%=raw @manager.surname %>
+    </p>
+  </section>
+  <section>
+    <h1>Position</h1>
+    <p>
+      <%=raw @manager.position %>
+    </p>
+  </section>
+  <section>
+    <h1>Telephone Number</h1>
+    <p>
+      <%=raw @manager.telephone_number %>
+    </p>
+  </section>
+  <section>
+    <h1>Email</h1>
+    <p>
+      <%=raw @manager.email %>
+    </p>
+  </section>
+  <section>
+    <h1>In Contatcs</h1>
+    <p>
+      <%=raw @manager.in_contatcs %>
+    </p>
+  </section>
+
+  <section>
+    <h1>Photo</h1>
+    <%= image_fu(@manager.photo, "300x", class: "player-photo-thumbnail") %>
+  </section>
+
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="managers">
+      <% @managers.each do |manager| %>
+        <li>
+          <%= link_to manager.name, refinery.managers_manager_path(manager) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

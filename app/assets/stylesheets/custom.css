@@ -135,3 +135,9 @@ header.gallery-title-center{
 .fc-event:hover{
 	cursor: pointer;
 }
+
+.persons-contact h5,
+.persons-contact span,
+.persons-contact p{
+	margin-bottom: 5px;
+}

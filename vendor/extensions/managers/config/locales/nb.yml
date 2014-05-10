@@ -1,0 +1,32 @@
+nb:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Lag en ny Manager
+            reorder: Endre rekkefølgen på Managers
+            reorder_done: Ferdig å endre rekkefølgen Managers
+          records:
+            title: Managers
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Managers enda. Klikk på "Lag en ny Manager" for å legge til din første manager.
+          manager:
+            view_live_html: Vis hvordan denne manager ser ut offentlig <br/><em>(åpner i et nytt vindu)</em>
+            edit: Rediger denne manager
+            delete: Fjern denne manager permanent
+      managers:
+        show:
+          other: Andre Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

@@ -13,4 +13,17 @@ $(document).ready(function() {
 	  }
 	});
 	
+	$("#contact-form").validate({
+	  rules: {
+	    "inquiry[name]": "required",
+
+	    "inquiry[email]": {
+	      required: true,
+	      email: true
+	    },
+	    
+	    "inquiry[message]": "required"    
+	  }
+	});
+
 });

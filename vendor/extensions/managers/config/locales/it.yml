@@ -1,0 +1,32 @@
+it:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Aggiungi Nuovo Manager
+            reorder: Riordina Managers
+            reorder_done: Termina il Riordino di Managers
+          records:
+            title: Managers
+            sorry_no_results: "Spiacenti! Nessun risultato trovato"
+            no_items_yet: Non ci sono ancora Managers. Clicca "Aggiungi Nuovo Manager" per aggiungere il tuo primo manager.
+          manager:
+            view_live_html: Guarda live questo manager <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo manager
+            delete: Rimuovi per sempre questo manager
+      managers:
+        show:
+          other: Altri Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

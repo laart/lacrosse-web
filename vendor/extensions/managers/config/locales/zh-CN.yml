@@ -1,0 +1,34 @@
+zh-CN:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: 建立新的 Manager
+            reorder: 对 Managers 重新排序
+            reorder_done: 对 Managers 的重新排序结束
+          records:
+            title: Managers
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Managers yet. Click "Add New Manager" to add your first manager.
+            no_items_yet: 目前没有 Managers . 点击 "Add New Manager" 创建一个manager.
+          manager:
+            view_live_html: 查看 manager 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 manager
+            delete: 永久删除 manager
+      managers:
+        show:
+          other: 其他 Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

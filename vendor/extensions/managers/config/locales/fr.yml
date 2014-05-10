@@ -1,0 +1,32 @@
+fr:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Manager
+            reorder: Réordonner les Managers
+            reorder_done: Fin de réordonnancement des Managers
+          records:
+            title: Managers
+            sorry_no_results: "Désolé ! Aucun résultat."
+            no_items_yet: 'Il n''y a actuellement aucun(e) Manager. Cliquer sur "Créer un(e) nouve(au/l/lle) Manager" pour créer votre premi(er/ère) manager.'
+          manager:
+            view_live_html: Voir ce(t/tte) manager <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) manager
+            delete: Supprimer définitivement ce(t/tte) manager
+      managers:
+        show:
+          other: Autres Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

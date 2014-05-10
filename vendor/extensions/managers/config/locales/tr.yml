@@ -1,0 +1,32 @@
+tr:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Yeni Ekle Manager
+            reorder: Tekrar sirala Managers
+            reorder_done: Tekrar siralama tamamlandiManagers
+          records:
+            title: Managers
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Managers yok henuz.  Tikla "Yeni Ekle Manager" eklemek senin ilk manager.
+          manager:
+            view_live_html: Bunu canlu manager goruntule <br/><em>(yeni bir pencerede acar)</em>
+            edit: Bunu Duzenle manager
+            delete: Bunu Sil manager sonsuza dek
+      managers:
+        show:
+          other: Diger Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

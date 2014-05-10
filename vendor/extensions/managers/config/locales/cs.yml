@@ -1,0 +1,32 @@
+cs:
+  refinery:
+    plugins:
+      managers:
+        title: Managers
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Přidat Manager
+            reorder: Řadit Managers
+            reorder_done: Konec řazení Managers
+          records:
+            title: Managers
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Managers. Zvolte "Přidat Manager" pro přidání prvního manager.
+          manager:
+            view_live_html: Zobrazit náhled manager<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit manager
+            delete: Smazat manager
+      managers:
+        show:
+          other: Další Managers
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Name
+        surname: Surname
+        position: Position
+        telephone_number: Telephone Number
+        email: Email
+        in_contatcs: In Contatcs

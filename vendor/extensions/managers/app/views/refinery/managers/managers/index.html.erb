@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="managers">
+    <% @managers.each do |manager| %>
+      <li>
+        <%= link_to manager.name, refinery.managers_manager_path(manager) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

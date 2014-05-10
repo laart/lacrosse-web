@@ -11,6 +11,6 @@ Refinery::PagesController.class_eval do
     end
 
     def find_blog_posts
-			@blog_posts = Refinery::Blog::Post.live.limit(2).order('created_at desc')    	
+		@blog_posts = Refinery::Blog::Post.live.limit(2).order('created_at desc')    	
     end
 end

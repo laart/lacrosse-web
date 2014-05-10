@@ -7,6 +7,8 @@ PATH
       refinerycms-core (~> 2.1.2)
     refinerycms-galleries (1.0)
       refinerycms-core (~> 2.1.2)
+    refinerycms-managers (1.0)
+      refinerycms-core (~> 2.1.2)
     refinerycms-players (1.0)
       refinerycms-core (~> 2.1.2)
 
@@ -166,6 +168,10 @@ GEM
     refinerycms-images (2.1.2)
       dragonfly (~> 0.9.14)
       refinerycms-core (= 2.1.2)
+    refinerycms-inquiries (2.1.0)
+      filters_spam (~> 0.2)
+      refinerycms-core (~> 2.1.0)
+      refinerycms-settings (~> 2.1.0)
     refinerycms-page-images (2.1.0)
       refinerycms-pages (~> 2.1.0)
     refinerycms-pages (2.1.2)
@@ -226,6 +232,8 @@ DEPENDENCIES
   refinerycms-blog (~> 2.1.0)
   refinerycms-events!
   refinerycms-galleries!
+  refinerycms-inquiries (~> 2.1.0)
+  refinerycms-managers!
   refinerycms-page-images (~> 2.1.0)
   refinerycms-players!
   refinerycms-settings

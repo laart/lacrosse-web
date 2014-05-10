@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140427064044) do
+ActiveRecord::Schema.define(:version => 20140509152312) do
 
   create_table "refinery_achievements", :force => true do |t|
     t.string   "tournament"
@@ -153,6 +153,30 @@ ActiveRecord::Schema.define(:version => 20140427064044) do
     t.string   "image_uid"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "refinery_inquiries_inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "message"
+    t.boolean  "spam",       :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+  end
+
+  add_index "refinery_inquiries_inquiries", ["id"], :name => "index_refinery_inquiries_inquiries_on_id"
+
+  create_table "refinery_managers", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.string   "position"
+    t.integer  "telephone_number"
+    t.string   "email"
+    t.boolean  "in_contatcs",      :default => false
+    t.integer  "photo_id"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|

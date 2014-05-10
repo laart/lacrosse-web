@@ -23,3 +23,9 @@ Refinery::Players::Engine.load_seed
 
 # Added by Refinery CMS Achievements extension
 Refinery::Achievements::Engine.load_seed
+
+# Added by Refinery CMS Inquiries engine
+Refinery::Inquiries::Engine.load_seed
+
+# Added by Refinery CMS Managers extension
+Refinery::Managers::Engine.load_seed
