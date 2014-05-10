@@ -1,11 +1,29 @@
-<% content_for :body do %>
-  <ul id="managers">
-    <% @managers.each do |manager| %>
-      <li>
-        <%= link_to manager.name, refinery.managers_manager_path(manager) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+      <% @managers.each do |manager| %>	
 
-<%= render '/refinery/content_page' %>
+        <div class="col-md-4 col-sm-4">
+          <div class="grid-item staff-item">
+            <div class="grid-item-inner">
+              <div class="media-box">
+              	<%= image_fu(manager.photo, "500x400#") %>
+              </div>
+              <div class="grid-content">
+                <h3><%= manager.name %> <%= manager.surname %></h3>
+                <div class="manager-information"> 
+                	<p><i class="fa fa-briefcase"></i> <%= manager.position %></p>
+                	<p><i class="fa fa-phone"></i> +371 <%= manager.telephone_number %></p>
+                	<p><i class="fa fa-envelope"></i> <%= manager.email %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
