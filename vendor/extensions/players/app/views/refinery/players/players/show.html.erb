@@ -22,34 +22,35 @@
               <div><p>Augums:</p><h4><%=raw @player.height %></h4></div>
               <div><p>Pilsēta:</p><h4><%=raw @player.city %></h4></div>
 
+              <% if @player.twitter? || @player.facebook? || @player.draugiem? || @player.googleplus? %>
+                <div class="player-social-links"><p>Sazinies:</p>
 
-              <div class="player-social-links"><p>Sazinies:</p>
-
-                <% if !@player.twitter.blank? %>
-                  <%= link_to url_with_protocol(@player.twitter), :target => "_blank" do %>
-                    <i class="fa fa-twitter-square fa-3x player-social-icons"></i>
+                  <% if @player.twitter? %>
+                    <%= link_to url_with_protocol(@player.twitter), :target => "_blank" do %>
+                      <i class="fa fa-twitter-square fa-3x player-social-icons"></i>
+                    <% end %>
                   <% end %>
-                <% end %>
 
-                <% if !@player.facebook.blank? %>
-                  <%= link_to url_with_protocol(@player.facebook), :target => "_blank" do %>
-                    <i class="fa fa-facebook-square fa-3x player-social-icons"></i>
+                  <% if @player.facebook? %>
+                    <%= link_to url_with_protocol(@player.facebook), :target => "_blank" do %>
+                      <i class="fa fa-facebook-square fa-3x player-social-icons"></i>
+                    <% end %>
                   <% end %>
-                <% end %>
 
-                <% if !@player.draugiem.blank? %>
-                  <%= link_to url_with_protocol(@player.draugiem), :target => "_blank" do %>
-                    <i class="fa fa-square fa-3x player-social-icons"></i>
+                  <% if @player.draugiem? %>
+                    <%= link_to url_with_protocol(@player.draugiem), :target => "_blank" do %>
+                      <i class="fa fa-square fa-3x player-social-icons"></i>
+                    <% end %>
                   <% end %>
-                <% end %>
 
-                <% if !@player.googleplus.blank? %>
-                  <%= link_to url_with_protocol(@player.googleplus), :target => "_blank" do %>
-                    <i class="fa fa-google-plus-square fa-3x player-social-icons"></i>
+                  <% if @player.googleplus? %>
+                    <%= link_to url_with_protocol(@player.googleplus), :target => "_blank" do %>
+                      <i class="fa fa-google-plus-square fa-3x player-social-icons"></i>
+                    <% end %>
                   <% end %>
-                <% end %>
+                </div>
+              <% end %>
 
-              </div>
             </div>
             <hr>
 
@@ -57,8 +58,6 @@
             <p><%= raw @player.description %></p>
 
           </div>
-
-          <%= render '/refinery/content_page' %>
 
         </div>
 

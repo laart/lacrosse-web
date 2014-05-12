@@ -1,0 +1,23 @@
+<%= render 'refinery/admin/search_header', :url => refinery.new_player_inquiries_admin_new_player_inquiries_path %>
+<% if searching? %>
+  <% if @new_player_inquiries.any? %>
+    <ul>
+      <%= render :partial => 'new_player_inquiry', :collection => @new_player_inquiries %>
+    </ul>
+  <% else %>
+    <p><%= t('no_results', :scope => 'refinery.admin.search') %></p>
+  <% end %>
+<% else %>
+  <% if @grouped_new_player_inquiries.any? -%>
+    <% @grouped_new_player_inquiries.each do |container| %>
+      <h3><%= l((new_player_inquiry_group = container.last).first.created_at, :format => :short) %></h3>
+      <ul>
+        <%= render :partial => 'new_player_inquiry', :collection => new_player_inquiry_group %>
+      </ul>
+    <% end %>
+  <% else -%>
+    <p>
+      <strong><%= t('no_new_player_inquiries', :scope => 'refinery.new_player_inquiries.admin.new_player_inquiries.index') %></strong>
+    </p>
+  <% end -%>
+<% end %>

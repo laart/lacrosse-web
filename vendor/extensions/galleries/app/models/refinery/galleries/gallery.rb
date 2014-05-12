@@ -9,7 +9,7 @@ module Refinery
 			has_many :images, :through => :image_pages, :order => 'position ASC'
 			has_many_page_images
 
-      validates :title, :presence => true, :uniqueness => true
+      validates :title, :presence => true
       validates :image_pages, :presence => true
     end
   end

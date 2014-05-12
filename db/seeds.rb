@@ -29,3 +29,5 @@ Refinery::Inquiries::Engine.load_seed
 
 # Added by Refinery CMS Managers extension
 Refinery::Managers::Engine.load_seed
+
+Refinery::NewPlayerInquiries::Engine.load_seed

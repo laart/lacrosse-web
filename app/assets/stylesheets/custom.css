@@ -19,10 +19,16 @@
 
 label.error{
 	font-family: "Roboto", sans-serif;
-	position: absolute;
-	margin-top: -20px;
+/*	position: absolute;*/
+/*	margin-top: -20px;*/
+	margin-bottom: 10px;
 	color: red;
 }
+
+input.error, select.error, textarea.error{
+  border: 1px solid red;
+}
+
 
 h3.gallery-title{
 	color:#80276c;
@@ -116,7 +122,7 @@ i.player-social-icons{
 
 .info-table li h3{
 	display: inline-block;
-	color:#80276c;
+	color: #80276c;
 }
 
 .info-table li p{
@@ -156,4 +162,8 @@ header.gallery-title-center{
 	margin-left: 0;
 	margin-right: 10px;
 	text-decoration: none;
+}
+
+input.input-align-center{
+	text-align: center;
 }

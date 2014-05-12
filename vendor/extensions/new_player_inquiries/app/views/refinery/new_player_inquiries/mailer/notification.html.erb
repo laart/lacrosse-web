@@ -1,0 +1,20 @@
+<%= t('.greeting') %>,<br/>
+<br/>
+<%= t('.you_recieved_new_new_player_inquiry') %><br/>
+<br/>
+<%= t('.new_player_inquiry_starts') %><br/>
+<br/>
+<%= t('.name', :default => t('activerecord.attributes.new_player_inquiry.name')) %>: <%= @new_player_inquiry.name %><br/>
+<%= t('.surname', :default => t('activerecord.attributes.new_player_inquiry.surname')) %>: <%= @new_player_inquiry.surname %><br/>
+<%= t('.phone', :default => t('activerecord.attributes.new_player_inquiry.phone')) %>: <%= @new_player_inquiry.phone %><br/>
+<%= t('.email', :default => t('activerecord.attributes.new_player_inquiry.email')) %>: <%= @new_player_inquiry.email %><br/>
+<%= t('.age', :default => t('activerecord.attributes.new_player_inquiry.age')) %>: <%= @new_player_inquiry.age %><br/>
+<%= t('.experience', :default => t('activerecord.attributes.new_player_inquiry.experience')) %>: 
+<%= @new_player_inquiry.experience %>
+<br/>
+<%= t('.new_player_inquiry_ends') %><br/>
+<br/>
+<%= t('.closing_line') %>,<br/>
+<%= Refinery::Core.site_name %><br/>
+<br/>
+<%= t('.ps_html') %>

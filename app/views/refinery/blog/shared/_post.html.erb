@@ -2,7 +2,9 @@
     <article class="blog_post post" id="<%= dom_id(post) %>">
       <div class="row">
         <div class="col-md-4 col-sm-4">
-          <%= link_to(image_fu(post.featured_image, "600x400", :class => 'img-thumbnail'), refinery.blog_post_path(post)) %>
+          <% if post.featured_image %>
+            <%= link_to(image_fu(post.featured_image, "600x400", :class => 'img-thumbnail'), refinery.blog_post_path(post)) %>
+          <% end %>
          </div>
         <div class="col-md-8 col-sm-8">      
           <h3><%= link_to post.title, refinery.blog_post_path(post) %></h3>

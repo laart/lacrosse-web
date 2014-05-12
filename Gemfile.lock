@@ -9,6 +9,9 @@ PATH
       refinerycms-core (~> 2.1.2)
     refinerycms-managers (1.0)
       refinerycms-core (~> 2.1.2)
+    refinerycms-new_player_inquiries (1.0)
+      refinerycms-core (~> 2.1.2)
+      refinerycms-settings (~> 2.1.1)
     refinerycms-players (1.0)
       refinerycms-core (~> 2.1.2)
 
@@ -234,9 +237,10 @@ DEPENDENCIES
   refinerycms-galleries!
   refinerycms-inquiries (~> 2.1.0)
   refinerycms-managers!
+  refinerycms-new_player_inquiries!
   refinerycms-page-images (~> 2.1.0)
   refinerycms-players!
-  refinerycms-settings
+  refinerycms-settings (~> 2.1.1)
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)

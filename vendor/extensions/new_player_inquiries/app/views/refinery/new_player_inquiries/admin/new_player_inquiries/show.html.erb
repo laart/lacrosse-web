@@ -1,0 +1,91 @@
+<div id='records'>
+  <h2><%= t('.new_player_inquiry') %></h2>
+  <table id='new_player_inquiry' class='inquiry'>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.name', :default => t('activerecord.attributes.new_player_inquiry.name')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @new_player_inquiry.name %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.surname', :default => t('activerecord.attributes.new_player_inquiry.surname')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @new_player_inquiry.surname %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.phone', :default => t('activerecord.attributes.new_player_inquiry.phone')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @new_player_inquiry.phone %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.email', :default => t('activerecord.attributes.new_player_inquiry.email')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @new_player_inquiry.email %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <strong>
+            <%= t('.age', :default => t('activerecord.attributes.new_player_inquiry.age')) %>
+          </strong>
+        </td>
+        <td>
+          <%= @new_player_inquiry.age %>
+        </td>
+      </tr>
+      <tr>
+        <td valign='top'>
+          <strong>
+            <%= t('.experience', :default => t('activerecord.attributes.new_player_inquiry.experience')) %>
+          </strong>
+        </td>
+        <td>
+          <p style='margin-top: 0px'>
+            <% @new_player_inquiry.message.to_s.gsub("\r\n\r\n", "\r\n").split("\r\n").each_with_index do |sentence, index| %>
+              <%=raw "</p><p>" unless index == 0 %>
+              <%= sentence %>
+            <% end %>
+          </p>
+        </td>
+      </tr>
+  </table>
+</div>
+<div id='actions'>
+  <h2><%= t('.details')%></h2>
+  <p>
+    <strong><%= t('.age') %>:</strong> <%= time_ago_in_words(@new_player_inquiry.created_at) %>
+  </p>
+  <h2><%= t('.actions') %></h2>
+  <ul>
+    <li>
+      <%= link_to t('.back_to_all_new_player_inquiries'), refinery.url_for(:action => 'index'),
+                   :class => "back_icon" %>
+    </li>
+    <li>
+      <%= link_to t('delete', :scope => 'refinery.new_player_inquiries.admin.new_player_inquiries'),
+                  refinery.new_player_inquiries_admin_new_player_inquiry_path(@new_player_inquiry),
+                  :class => 'delete_icon no-tooltip confirm-delete',
+                  :title => t('delete', :scope => 'refinery.new_player_inquiries.admin.new_player_inquiries'),
+                  :'data-confirm' => t('message', :scope => 'refinery.admin.delete', :title => @new_player_inquiry.name),
+                  :'data-method' => "delete" %>
+    </li>
+  </ul>
+</div>

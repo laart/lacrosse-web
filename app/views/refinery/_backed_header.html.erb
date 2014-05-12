@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <ol class="breadcrumb">
 
-            <li><%= link_to 'Home', refinery.root_path %></li>
+            <li><%= link_to 'Sākums', refinery.root_path %></li>
             <% [@page.ancestors, @page].flatten.collect do |p| %>
               <li class="active"><%= link_to p.title, p.url %></li>
             <% end %>

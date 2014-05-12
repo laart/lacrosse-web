@@ -3,5 +3,5 @@ Refinery::Blog::Post.class_eval do
 	attr_accessible :featured_image_id
 	belongs_to :featured_image, :class_name => '::Refinery::Image'
 
-	validates :featured_image, presence: true
+	validates :featured_image, :custom_teaser, presence: true
 end

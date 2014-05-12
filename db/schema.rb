@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140509152312) do
+ActiveRecord::Schema.define(:version => 20140510204618) do
 
   create_table "refinery_achievements", :force => true do |t|
     t.string   "tournament"
@@ -178,6 +178,19 @@ ActiveRecord::Schema.define(:version => 20140509152312) do
     t.datetime "created_at",                          :null => false
     t.datetime "updated_at",                          :null => false
   end
+
+  create_table "refinery_new_player_inquiries", :force => true do |t|
+    t.string   "name"
+    t.string   "surname"
+    t.integer  "phone"
+    t.string   "email"
+    t.integer  "age"
+    t.text     "experience"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "refinery_new_player_inquiries", ["id"], :name => "index_refinery_new_player_inquiries_on_id"
 
   create_table "refinery_page_part_translations", :force => true do |t|
     t.integer  "refinery_page_part_id"

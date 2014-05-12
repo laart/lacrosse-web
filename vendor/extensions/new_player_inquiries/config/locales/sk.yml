@@ -1,0 +1,81 @@
+sk:
+  refinery:
+    plugins:
+      new_player_inquiries:
+        title: New Player Inquiries
+        description: Poskytuje kontaktný formulár a zaznamenáva new player inquiries
+    new_player_inquiries:
+      new_player_inquiries:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+      admin:
+        new_player_inquiries:
+          delete: Trvalo odstrániť new player inquiry
+          new_player_inquiry:
+            read_new_player_inquiry: Prečítať new player inquiry
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_new_player_inquiries: Zatiaľ ste neobdržali žiadne new player inquiries.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_new_player_inquiries: Späť na všetky new player inquiries
+            spam: Spam
+            spam_yes: 'áno'
+            new_player_inquiry: New Player Inquiry
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s upozornením na nový new player inquiry.
+            hint: Keď je odoslaný nový new player inquiry, Refinery odošle upozornenie na Váš e-mail.
+            example: "Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky, Refinery odošle e-mail s potvrdením o prijatí odosielateľovi new player inquiry.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_new_player_inquiry: Klient robiť new player inquiry
+            message: Správa
+            note: "Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta v e-maile"
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_new_player_inquiry: Práve ste obdržali nový new player inquiry na vašej webové stránke.
+          new_player_inquiry_starts: --- new player inquiry začiatok ---
+          new_player_inquiry_ends: --- new player inquiry koniec ---
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše new player inquiries sú uložené v "New Player Inquiries" sekcii v Refinery, ak by ste ich chceli zobraziť neskôr.
+  activerecord:
+    models:
+      new_player_inquiry: New Player Inquiry
+    attributes:
+      new_player_inquiry:
+        name: Name
+        surname: Surname
+        phone: Phone
+        email: Email
+        age: Age
+        experience: Experience

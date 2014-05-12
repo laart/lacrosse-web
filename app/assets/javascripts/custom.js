@@ -26,4 +26,27 @@ $(document).ready(function() {
 	  }
 	});
 
+	$("#new-player-form").validate({
+	  rules: {
+	    "new_player_inquiry[name]": "required",
+	    "new_player_inquiry[surname]": "required",
+	    "new_player_inquiry[age]": {
+	    	required: true,
+	    	number: true
+	    },
+
+	    "new_player_inquiry[phone]": {
+	    	required: true,
+	    	number: true
+	    },
+
+	    "new_player_inquiry[email]": {
+	      required: true,
+	      email: true
+	    },
+	    
+	    "new_player_inquiry[experience]": "required"    
+	  }
+	});
+
 });

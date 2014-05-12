@@ -15,3 +15,8 @@ input.text-field-small{
 	width: 50px;
 	text-align: center;
 }
+
+/* hide description tab in admin panel new gallery model */
+form#new_gallery #new-gallery-description  {
+	display: none;
+}
