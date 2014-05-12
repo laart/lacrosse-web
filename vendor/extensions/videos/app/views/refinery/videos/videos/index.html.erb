@@ -1,0 +1,27 @@
+<div class="main" role="main">
+  <div id="content" class="content full">
+    <div class="container">
+      <div class="row">
+        <ul class="isotope-grid" data-sort-id="gallery">
+
+        	<% @videos.each do |video| %>
+
+          <li class="col-md-6 col-sm-6 grid-item post format-video">
+          	<h3 class="gallery-title"><%= video.title %></h3>
+            <div class="grid-item-inner">
+            	<%= link_to image_tag(video.featured_image.thumbnail(geometry: "600x400#c").url), video.url, "data-rel" => "prettyPhoto", class: "media-box" %>
+            </div>
+          </li>
+
+          <% end %>
+
+        </ul>
+      </div>
+
+      <div class="text-align-center will-paginate-galleries">
+        <%= will_paginate @videos, renderer: BootstrapPagination::Rails %>
+      </div>
+
+    </div>
+  </div>
+</div>

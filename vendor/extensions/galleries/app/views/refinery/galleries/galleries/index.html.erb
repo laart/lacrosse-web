@@ -2,14 +2,14 @@
   <div id="content" class="content full">
     <div class="container">
       <div class="row">
-        <ul class="isotope-grid" data-sort-id="gallery">
+        <ul class="sort-destination" data-sort-id="gallery">
 
 			    <% @galleries.each do |gallery| %>
 			      <li class="col-md-4 col-sm-4 grid-item post format-gallery">
 			      	<h3 class="gallery-title"><%= gallery.title %></h3>
 			      	<div class="grid-item-inner">
 			      		<div class="media-box">
-			      			<div class="flexslider" data-autoplay="yes" data-arrows="yes">
+			      			<div class="flexslider" data-autoplay="no" data-arrows="yes">
 			      				<ul class="slides">
 
 			      					<% gallery.images.each do |image| %>
@@ -30,8 +30,27 @@
 
 			    <% end %>
 
+			    <% @videos.each do |video| %>
+			    	<li class="col-md-4 col-sm-4 grid-item post format-video">
+			    		<h3 class="gallery-title"><%= video.title %></h3>
+			    		<div class="grid-item-inner">
+			    			<%= link_to image_tag(video.featured_image.thumbnail(geometry: "600x400#c").url), video.url, "data-rel" => "prettyPhoto", class: "media-box" %>
+			    		</div>
+
+				      <span class="gallery-created-at"><i class="fa fa-calendar"></i> 
+				        <%= l(video.created_at.to_date, :format => :long) %>
+				      </span> 	
+
+			    	</li>
+			    <% end %>
+
 				</ul>
 			</div>
+
+      <div class="text-align-center will-paginate-galleries">
+        <%= will_paginate @galleries, renderer: BootstrapPagination::Rails %>
+      </div>
+
 		</div>
 	</div>
 </div>

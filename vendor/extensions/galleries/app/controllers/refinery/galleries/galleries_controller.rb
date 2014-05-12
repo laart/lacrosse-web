@@ -2,7 +2,7 @@ module Refinery
   module Galleries
     class GalleriesController < ::ApplicationController
 
-      before_filter :find_all_galleries
+      before_filter :find_all_galleries, :find_videos
       before_filter :find_page
 
       def index
@@ -22,11 +22,15 @@ module Refinery
     protected
 
       def find_all_galleries
-        @galleries = Gallery.order('position ASC')
+        @galleries = Gallery.order('position DESC').page(params[:page]).per_page(9)
       end
 
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/galleries").first
+      end
+
+      def find_videos
+        @videos = Refinery::Videos::Video.order('created_at desc')
       end
 
     end

@@ -49,4 +49,22 @@ $(document).ready(function() {
 	  }
 	});
 
+
+	hideGalleryPagination();
 });
+
+
+//Hide Galleries Pagination if videos tab is selected
+function hideGalleryPagination(){
+		$( "ul.sort-source li a" ).click(function() {
+
+		if ( $(this).parent().attr('data-option-value') == ".format-gallery" ) {
+			$(".will-paginate-galleries").show();
+		};
+
+		if ( $(this).parent().attr('data-option-value') == ".format-video" ) {
+			$(".will-paginate-galleries").hide();
+		};
+
+	});
+};
