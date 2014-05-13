@@ -6,6 +6,15 @@
           </div>
           <div class="col-md-8 col-sm-6 col-xs-4">
             <ul class="top-navigation hidden-sm hidden-xs">
+              <li>
+
+              <% if I18n.locale == :en %>
+                <%= link_to "Latviski", refinery.url_for(:locale => :lv) %>
+              <% else %>
+                <%= link_to "English", refinery.url_for(:locale => :en) %>
+              <% end %>
+
+              </li>
               <li><%= link_to "Piesakies Komandā", refinery.new_new_player_inquiries_new_player_inquiry_path %></li>
               <li><%= link_to "Kalendārs", refinery.events_events_path %></li>
             </ul>

@@ -9,6 +9,8 @@ lv:
   blog_comment_name: "Vārds"
   blog_comment_email: "Epasts"
   blog_comment_message: "Ziņa"
+  sponsors_title: "Sponsori"
+  footer_about: "Par"
   refinery:
     pages:
       home:

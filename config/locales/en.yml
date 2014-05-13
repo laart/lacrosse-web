@@ -12,6 +12,8 @@ en:
   blog_comment_name: "Name"
   blog_comment_email: "Email"
   blog_comment_message: "Message"
+  sponsors_title: "Sponsors"
+  footer_about: "About"
   refinery:
     pages:
       home:

@@ -3,19 +3,19 @@
       <div class="row"> 
         <!-- Start Footer Widgets -->
         <div class="col-md-4 col-sm-4 widget footer-widget">
-          <h4 class="footer-widget-title">Par LadyLacrosse</h4>
+          <h4 class="footer-widget-title"><%= t('footer_about')  %> LadyLacrosse</h4>
           <%= image_tag("logo.png", alt: "logo") %>
           <div class="spacer-20"></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
         </div>
         <div class="col-md-4 col-sm-4 widget footer-widget">
-          <h4 class="footer-widget-title">Blogs</h4>
+          <h4 class="footer-widget-title"><%= t('sponsors_title') %></h4>
           <ul>
-            <li><a href="index.html">Sākums</a></li>
-            <li><a href="about.html">Jaunumi</a></li>
-            <li><a href="events.html">Spēļu apskati</a></li>
-            <li><a href="sermons.html">Pasākumi</a></li>
-            <li><a href="blog-masonry.html">Blogs</a></li>
+            <li><%= link_to "Latvijas Lakrosa Federācija", "http://www.llf.lv", :target => "_blank" %></li>
+            <li><%= link_to "LadyLaxi", "http://www.ladytaxi.lv", :target => "_blank" %></li>
+            <li><%= link_to "LSPA", "http://www.lspa.eu", :target => "_blank"  %></li>
+            <li><%= link_to "Humulus", "http://www.humulus.lv", :target => "_blank" %></li>
+            <li><%= link_to "RPV Hostings", "http://www.rpv.lv", :target => "_blank" %></li>
           </ul>
         </div>
         <div class="col-md-4 col-sm-4 widget footer-widget">
@@ -37,8 +37,3 @@
       </div>
     </div>
   <!-- End Footer --> 
-
-
-<p>
-  
-</p>
