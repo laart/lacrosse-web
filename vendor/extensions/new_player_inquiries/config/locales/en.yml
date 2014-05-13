@@ -7,8 +7,17 @@ en:
     new_player_inquiries:
       new_player_inquiries:
         new:
+          name: 'Name'
+          surname: 'Surname'
+          age: 'Age'
+          phone_number: 'Phone number'
+          email: 'E-mail'
+          experience_in_sports: 'Experience in sports'
           send: Send message
           privacy_policy: We value your privacy
+          our_team: 'Our Team'
+          experience_placeholder: 'Please shortly describe your experience in sports'
+          new_player_form_title: 'New player application form'
       admin:
         new_player_inquiries:
           delete: Remove this new player inquiry forever

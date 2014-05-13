@@ -21,10 +21,13 @@ en:
       achievements:
         show:
           other: Other Achievements
+        index:
+          place: 'Place'
   activerecord:
     attributes:
       'refinery/achievements/achievement':
         tournament: Tournament
         country: Country
-        place: Place
+        place: Achieved Place
         description: Description
+        date: Date

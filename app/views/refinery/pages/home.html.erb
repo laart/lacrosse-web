@@ -13,9 +13,9 @@
       <div class="row"> 
         <!-- Start Featured Blocks -->
         <div class="featured-blocks clearfix">
-          <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail"> <img src="<%= asset_path("team.jpg") %>" alt="staff"> <strong>Mūsu Komanda</strong> <span class="more">lasīt vairāk</span> </a> </div>
-          <div class="col-md-4 col-sm-4 featured-block"> <a href="about.html" class="img-thumbnail"> <img src="<%= asset_path("join.jpg") %>" alt="staff"> <strong>Gribi izmēģināt Lakrosu?</strong> <span class="more">lasīt vairāk</span> </a> </div>
-          <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="<%= asset_path("trophies.jpg") %>" alt="staff"> <strong>Sasniegumi</strong> <span class="more">lasīt vairāk</span> </a> </div>
+          <div class="col-md-4 col-sm-4 featured-block"> <a href="our-staff.html" class="img-thumbnail"> <img src="<%= asset_path("team.jpg") %>" alt="staff"> <strong><%= t('.our_team') %></strong> <span class="more"><%= t('.read_more') %></span> </a> </div>
+          <div class="col-md-4 col-sm-4 featured-block"> <a href="about.html" class="img-thumbnail"> <img src="<%= asset_path("join.jpg") %>" alt="staff"> <strong><%= t('.new_players') %></strong> <span class="more"><%= t('.read_more') %></span> </a> </div>
+          <div class="col-md-4 col-sm-4 featured-block"> <a href="sermons.html" class="img-thumbnail"> <img src="<%= asset_path("trophies.jpg") %>" alt="staff"> <strong><%= t('.achievements') %></strong> <span class="more"><%= t('.read_more') %></span> </a> </div>
         </div>
         <!-- End Featured Blocks --> 
       </div>
@@ -24,18 +24,18 @@
           <!-- Events Listing -->
           <div class="listing events-listing">
             <header class="listing-header">
-              <h3>Tuvākie notikumi</h3>
+              <h3><%= t('.closest_events') %></h3>
             </header>
             <section class="listing-cont">
               <ul>
                 <% @events.each do |event| %>
                 <li class="item event-item">
-                  <div class="event-date"> <span class="date"><%= event.start_time.strftime("%d") %></span> <span class="month"><%= event.start_time.strftime("%b") %></span> </div>
+                  <div class="event-date"> <span class="date"><%= event.start_time.strftime("%d") %></span> <span class="month"><%= l(event.start_time, :format => "%b") %></span> </div>
                   <div class="event-detail">
                     <h4><%= link_to event.title, refinery.events_events_path %></a></h4>
-                    <span class="event-dayntime meta-data"><%= event.start_time.strftime("%A") %> | <%= event.start_time.strftime("%H:%M") %></span> </div>
+                    <span class="event-dayntime meta-data"><%= l(event.start_time, :format => "%A") %> | <%= event.start_time.strftime("%H:%M") %></span> </div>
                   <div class="to-event-url">
-                    <div><%= link_to "Kalendārs", refinery.events_events_path, class: "btn btn-default btn-sm" %></div>
+                    <div><%= link_to t('.calendar'), refinery.events_events_path, class: "btn btn-default btn-sm" %></div>
                   </div>
                 </li>
                 <% end %>
@@ -46,7 +46,7 @@
           <!-- Latest News -->
           <div class="listing post-listing">
             <header class="listing-header">
-              <h3>Jaunumi</h3>
+              <h3><%= t('.news_title') %></h3>
             </header>
             <section class="listing-cont">
               <ul>
@@ -72,30 +72,25 @@
         </div>
         <!-- Start Sidebar -->
         <div class="col-md-4 col-sm-6"> 
-          <!-- Latest Sermons -->
+          <!-- Latest Videos -->
           <div class="listing sermons-listing">
             <header class="listing-header">
-              <h3>Jaunākais video</h3>
+              <h3><%= t('.latest_video') %></h3>
             </header>
             <section class="listing-cont">
               <ul>
-                <li class="item sermon featured-sermon"> <span class="date">Feb 14, 2014</span>
-                  <h4><a href="single-sermon.html">Lakrosa spēle</a></h4>
-                  <div class="featured-sermon-video">
-                    <iframe src="//player.vimeo.com/video/92477586?color=ff0179" width="200" height="113" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                <li class="item sermon featured-sermon"> <span class="date"><%= l(@video.created_at.to_date, :format => :long)%></span>
+                  <h4><a href="single-sermon.html"><%= @video.title %></a></h4>
+                  <div class="featured-sermon-video format-video"> 
+                    <%= link_to image_tag(@video.featured_image.thumbnail(geometry: "600x400#c").url), @video.url, "data-rel" => "prettyPhoto", class: "media-box" %>
                   </div>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
-                  <div class="sermon-actions"> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Video"><i class="fa fa-video-camera"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Audio"><i class="fa fa-headphones"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Read online"><i class="fa fa-file-text-o"></i></a> <a href="#" data-placement="top" data-toggle="tooltip" data-original-title="Download PDF"><i class="fa fa-book"></i></a> </div>
+                  <div class="sermon-actions video-center">
+                    <%= link_to refinery.videos_videos_path, class: "btn btn-default btn-lg home-other-videos-btn" do %>
+                      <span><i class="fa fa-video-camera fa-2x"></i> <%= t('.all_videos') %></span>
+                    <% end %>
+                  </div>
                 </li>
-                <li class="item sermon">
-                  <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                  <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
-                <li class="item sermon">
-                  <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                  <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
-                <li class="item sermon">
-                  <h2 class="sermon-title"><a href="single-sermon.html">Voluptatum deleniti atque corrupti</a></h2>
-                  <span class="meta-data"><i class="fa fa-calendar"></i> on 17th Dec, 2013</span> </li>
               </ul>
             </section>
           </div>
@@ -109,8 +104,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-3 col-sm-3">
-        <h4 class="homepage-galleries">Pēdējās izveidotās galerijas</h4>
-        <%= link_to "Visas Galerijas", refinery.galleries_galleries_path, class: "btn btn-default btn-lg" %>
+        <h4 class="homepage-galleries"><%= t('.latest_galleries') %></h4>
+        <%= link_to t('.all_galleries'), refinery.galleries_galleries_path, class: "btn btn-default btn-lg" %>
       </div>
 
     <% @galleries.each do |gallery| %>   

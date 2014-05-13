@@ -1,0 +1,28 @@
+lv:
+  refinery:
+    plugins:
+      galleries:
+        title: Galerijas
+    galleries:
+      admin:
+        galleries:
+          actions:
+            create_new: Pievienot Jaunu Galeriju
+            reorder: Mainīt Galeriju Secību
+            reorder_done: Pabeigt kārtošanu
+          records:
+            title: Galerijas
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Vēl nav pievienots neviena galerija. Nospiediet "Pievienot Jaunu Galeriju" lai pievienotu jaunu galeriju.
+          gallery:
+            view_live_html: Apskatīt šo galeriju live <br/><em>(atveras jaunā logā)</em>
+            edit: Labot šo galeriju
+            delete: Izdzēst šo spēlētāju
+      galleries:
+        show:
+          other: Citas Galerijas
+  activerecord:
+    attributes:
+      'refinery/galleries/gallery':
+        title: Nosaukums
+        description: Apraksts

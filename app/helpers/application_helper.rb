@@ -12,7 +12,7 @@ module ApplicationHelper
 	end
 
 	def home?
-		current_page?(refinery.root_path)
+		current_page?(refinery.root_path(:locale => :lv) || refinery.root_path(:locale => :en))
 	end
 
 	#Load controller specific js

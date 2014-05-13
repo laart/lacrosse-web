@@ -1,0 +1,30 @@
+lv:
+  refinery:
+    plugins:
+      videos:
+        title: Video
+    videos:
+      admin:
+        videos:
+          actions:
+            create_new: Pievienot Jaunu Video
+            reorder: Mainīt Video Secību
+            reorder_done: Pabeigt kārtošanu
+          records:
+            title: Video
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Vēl nav pievienots neviens video. Nospiediet "Pievienot Jaunu Video" lai pievienotu jaunu video.
+          video:
+            view_live_html: Apskatīt šo video live <br/><em>(atveras jaunā logā)</em>
+            edit: Labot šo video
+            delete: Izdzēst šo video
+      videos:
+        show:
+          other: Citi Video
+  activerecord:
+    attributes:
+      'refinery/videos/video':
+        title: Nosaukums
+        description: Apraksts
+        url: Url adrese
+        featured_image: Video sākuma attēls

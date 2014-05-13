@@ -2,4 +2,27 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  breadcrumb: "Home"
+  inquiry_club_location: "Our Location"
+  inquiry_club_contacts: "Contacts"
+  inquiry_send: "Send Message"
+  galleries: "Galleries"
+  videos: "Videos"
+  blog_continue_reading: "Continue reading"
+  blog_comment_name: "Name"
+  blog_comment_email: "Email"
+  blog_comment_message: "Message"
+  refinery:
+    pages:
+      home:
+        our_team: "Our Team"
+        new_players: "Want to try Lacrosse?"
+        achievements: "Our Achievements"
+        read_more: "read more"
+        closest_events: "Closest events"
+        calendar: "Calendar"
+        latest_video: "Latest video"
+        news_title: "Latest news"
+        latest_galleries: "Latest Galleries"
+        all_galleries: "All galleries"
+        all_videos: "Watch other Videos"

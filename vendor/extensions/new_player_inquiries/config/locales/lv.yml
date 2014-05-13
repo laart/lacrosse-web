@@ -2,12 +2,22 @@ lv:
   refinery:
     plugins:
       new_player_inquiries:
-        title: New Player Inquiries
+        title: Jauno Spēlētāju Pieteikumi
     new_player_inquiries:
       new_player_inquiries:
         new:
+          name: 'Vārds'
+          surname: 'Uzvārds'
+          age: 'Vecums'
+          phone_number: 'Telefona nummurs'
+          email: 'E-pasts'
+          experience_in_sports: 'Pieredze sportā'
           send: Sūtīt ziņu
           privacy_policy: Mēs cienam Jūsu privātumu
+          our_team: 'Mūsu Komanda'
+          experience_placeholder: 'Lūdzu īsi aprakstiet savu pieredzi sportā'
+          new_player_form_title: 'Jauno spēlētāju pieteikuma forma'
+
       admin:
         new_player_inquiries:
           delete: Dzēst šo pieprasījumu
@@ -72,9 +82,9 @@ lv:
       new_player_inquiry: New Player Inquiry
     attributes:
       new_player_inquiry:
-        name: Name
-        surname: Surname
-        phone: Phone
-        email: Email
-        age: Age
-        experience: Experience
+        name: Vārds
+        surname: Uzvārds
+        phone: Telefona nummurs
+        email: E-pasts
+        age: Vecums
+        experience: Pieredze sportā

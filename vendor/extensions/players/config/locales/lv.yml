@@ -1,0 +1,51 @@
+lv:
+  refinery:
+    plugins:
+      players:
+        title: Spēlētāji
+        season: "Sezona"
+    players:
+      admin:
+        players:
+          actions:
+            create_new: Pievienot Jaunu Spēlētāju
+            reorder: Mainīt Spēlētāju Secību
+            reorder_done: Pabeigt kārtošanu
+          records:
+            title: Spēlētāji
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Vēl nav pievienots neviens spelētājs. Nospiediet "Pievienot Jaunu Spēlētāju" lai pievienotu jaunu spēlētāju.
+          player:
+            view_live_html: Apskatīt šo spēlētāju live <br/><em>(atveras jaunā logā)</em>
+            edit: Labot šo spēlētāju
+            delete: Izdzēst šo spēlētāju
+      players:
+        show:
+          other: Citi Spēlētāji
+          player_name: 'Vārds'
+          player_surname: 'Uzvārds'
+          player_email: 'E-pasts'
+          player_age: 'Vecums'
+          player_position: 'Pozīcija'
+          player_number: 'Nummurs'
+          player_height: 'Augums'
+          player_city: 'Pilsēta'
+          player_description: 'Spēlētāja apraksts'
+          player_contact: 'Sazinies ar spēlētāju'
+        index:
+          season: 'Sezona'
+          player_name: 'Vārds'
+          player_surname: 'Uzvārds'
+          player_position: 'Pozīcija'
+  activerecord:
+    attributes:
+      'refinery/players/player':
+        name: Vārds
+        surname: Uzvārds
+        email: E-pasts
+        age: Vecums
+        position: Pozīcija
+        number: Nummurs
+        height: Augums
+        city: Pilsēta
+        description: Apraksts

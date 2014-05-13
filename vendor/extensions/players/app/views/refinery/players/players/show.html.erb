@@ -13,17 +13,17 @@
             </div>
 
             <div class="cold-md-4 player-info-right">
-              <div class=""><p>Vārds:</p><h4><%=raw @player.name %></h4></div>
-              <div><p>Uzvārds:</p><h4><%=raw @player.surname %></h4></div>
-              <div><p>E-pasts:</p><h4><%=raw @player.email %></h4></div>
-              <div><p>Vecums:</p><h4><%=raw @player.age %></h4></div>
-              <div><p>Pozīcija:</p><h4><%=raw @player.position %></h4></div>
-              <div><p>Nummurs:</p><h4><%=raw @player.number %></h4></div>
-              <div><p>Augums:</p><h4><%=raw @player.height %></h4></div>
-              <div><p>Pilsēta:</p><h4><%=raw @player.city %></h4></div>
+              <div class=""><p><%= t('.player_name') %>:</p><h4><%=raw @player.name %></h4></div>
+              <div><p><%= t('.player_surname') %>:</p><h4><%=raw @player.surname %></h4></div>
+              <div><p><%= t('.player_email') %>:</p><h4><%=raw @player.email %></h4></div>
+              <div><p><%= t('.player_age') %>:</p><h4><%=raw @player.age %></h4></div>
+              <div><p><%= t('.player_position') %>:</p><h4><%=raw @player.position %></h4></div>
+              <div><p><%= t('.player_number') %>:</p><h4><%=raw @player.number %></h4></div>
+              <div><p><%= t('.player_height') %>:</p><h4><%=raw @player.height %></h4></div>
+              <div><p><%= t('.player_city') %>:</p><h4><%=raw @player.city %></h4></div>
 
               <% if @player.twitter? || @player.facebook? || @player.draugiem? || @player.googleplus? %>
-                <div class="player-social-links"><p>Sazinies:</p>
+                <div class="player-social-links"><p><%= t('.player_contact') %>:</p>
 
                   <% if @player.twitter? %>
                     <%= link_to url_with_protocol(@player.twitter), :target => "_blank" do %>
@@ -54,7 +54,7 @@
             </div>
             <hr>
 
-            <h3>Spēlētāja apraksts</h3>
+            <h3><%= t('.player_description') %>:</h3>
             <p><%= raw @player.description %></p>
 
           </div>

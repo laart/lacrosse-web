@@ -1,0 +1,32 @@
+en:
+  refinery:
+    plugins:
+      managers:
+        title: Vadītāji
+    managers:
+      admin:
+        managers:
+          actions:
+            create_new: Pievienot Jaunu Vadītāju
+            reorder: Mainīt Vadītāju Secību
+            reorder_done: Pabeigt kārtošanu
+          records:
+            title: Vadītāji
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Vēl nav pievienots neviens vadītājs. Nospiediet "Pievienot Jaunu Vadītāju" lai pievienotu jaunu vadītāju.
+          manager:
+            view_live_html: Apskatīt šo vadītāju live <br/><em>(atveras jaunā logā)</em>
+            edit: Labot šo vadītāju
+            delete: Izdzēst šo vadītāju
+      managers:
+        show:
+          other: Citi Vadītāji
+  activerecord:
+    attributes:
+      'refinery/managers/manager':
+        name: Vārds
+        surname: Uzvārds
+        position: Amats
+        telephone_number: Telefona nummurs
+        email: E-pasts
+        in_contatcs: Pievienot Vadītāja informāciju Kontaktu lapā

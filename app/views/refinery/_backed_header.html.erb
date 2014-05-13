@@ -5,7 +5,7 @@
       <div class="col-md-12">
         <ol class="breadcrumb">
 
-            <li><%= link_to 'Sākums', refinery.root_path %></li>
+            <li><%= link_to t("breadcrumb"), refinery.root_path %></li>
             <% [@page.ancestors, @page].flatten.collect do |p| %>
               <li class="active"><%= link_to p.title, p.url %></li>
             <% end %>
@@ -21,7 +21,7 @@
   <div class="container">
     <div class="row">
 
-      <% if current_page?(refinery.galleries_galleries_path) %>
+      <% if current_page?(refinery.galleries_galleries_path(:locale => :lv) || refinery.galleries_galleries_path(:locale => :en)) %>
         <div class="col-md-6">
           <h1><%= @page.title %></h1>
         </div>
@@ -29,8 +29,8 @@
           <div class="gallery-filter">
             <ul class="nav nav-pills sort-source" data-sort-id="gallery" data-option-key="filter">
               <li data-option-value=".format-gallery" class="active"><a href="#"><i class="fa fa-camera"></i>
-                <span>Galerijas</span></a></li>
-              <li data-option-value=".format-video"><a href="#"><i class="fa fa-play"></i> <span>Video</span></a></li>
+                <span><%= t('galleries') %></span></a></li>
+              <li data-option-value=".format-video"><a href="#"><i class="fa fa-play"></i> <span><%= t('videos') %></span></a></li>
             </ul>
           </div>
         </div>

@@ -2,7 +2,7 @@
   <div id="content" class="content full">
     <div class="container">
       <div class="row">
-      	<h4 class="player-season">2014 sezona</h4>
+      	<h4 class="player-season"><%= Time.now.year %> <%= t('.season') %></h4>
 
           <ul class="isotope-grid">
 
@@ -32,9 +32,9 @@
             <thead>
               <tr>
                 <th> #Nr. </th>
-                <th> Vārds </th>
-                <th> Uzvārds </th>
-                <th> Pozīcija </th>
+                <th> <%= t('.player_name') %> </th>
+                <th> <%= t('.player_surname') %> </th>
+                <th> <%= t('.player_position') %> </th>
               </tr>
             </thead>
             <tbody>

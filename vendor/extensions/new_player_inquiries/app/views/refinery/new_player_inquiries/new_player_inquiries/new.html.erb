@@ -14,7 +14,7 @@
           <div class="col-md-8">
 
             <header class="single-post-header clearfix">
-              <h2 class="post-title">Jauno spēlētāju pieteikuma forma</h2>
+              <h2 class="post-title"><%= t('.new_player_form_title') %></h2>
             </header>
 
             <div class="post-content">
@@ -30,40 +30,40 @@
 
                     <div class="row">
                       <div class="col-md-6">
-                        <%= f.label 'Vārds' %>
-                        <%= f.text_field :name, class: "form-control", placeholder: "Vārds" %>
+                        <%= f.label t('.name') %>
+                        <%= f.text_field :name, class: "form-control", placeholder: t('.name') %>
                       </div>
 
                       <div class="col-md-6">
-                        <%= f.label 'Uzvārds' %>
-                        <%= f.text_field :surname, class: "form-control", placeholder: "Uzvārds" %>
+                        <%= f.label t('.surname') %>
+                        <%= f.text_field :surname, class: "form-control", placeholder: t('.surname') %>
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="col-md-2">
-                        <%= f.label 'Vecums' %>
+                        <%= f.label t('.age') %>
                         <%= f.number_field :age, class: "form-control input-align-center" %>
                       </div>
 
                       <div class="col-md-4">
-                        <%= f.label 'Telefona nummurs' %>
-                        <%= f.phone_field :phone, class: "form-control", placeholder: "Telefona nummurs" %>
+                        <%= f.label t('.phone_number') %>
+                        <%= f.phone_field :phone, class: "form-control", placeholder: t('.phone_number') %>
                       </div>
 
                       <div class="col-md-6">
-                        <%= f.label 'E-pasts' %>
-                        <%= f.email_field :email, class: "form-control", placeholder: "E-pasts" %>
+                        <%= f.label t('.email') %>
+                        <%= f.email_field :email, class: "form-control", placeholder: t('.email') %>
                       </div>
                     </div>
 
                     <div class="form-group">
-                      <%= f.label 'Jūsu pieredze sportā' %>
-                      <%= f.text_area :experience, :cols => 6, :rows => 8, class: "form-control", placeholder: "Lūdzu īsi aprakstiet savu pieredzi sportā" %>
+                      <%= f.label t('.experience_in_sports') %>
+                      <%= f.text_area :experience, :cols => 6, :rows => 8, class: "form-control", placeholder: t('.experience_placeholder')  %>
                     </div>
 
                     <div class="col-md-12">
-                      <%= f.submit 'Nosūtīt', class: "btn btn-primary btn-lg pull-right" %>
+                      <%= f.submit t('.send'), class: "btn btn-primary btn-lg pull-right" %>
                     </div>
 
                   </div>
@@ -78,7 +78,7 @@
           <header class="single-post-header clearfix">
             <div class="widget sidebar-widget">
               <div class="sidebar-widget-title">
-                <h3>Mūsu komanda</h3>
+                <h3><%= t('.our_team') %></h3>
               </div>
 
               <div class="format-link">

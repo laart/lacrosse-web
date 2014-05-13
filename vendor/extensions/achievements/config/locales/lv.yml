@@ -1,0 +1,33 @@
+lv:
+  refinery:
+    plugins:
+      achievements:
+        title: Sasniegumi
+    achievements:
+      admin:
+        achievements:
+          actions:
+            create_new: Pievienot Jaunu Sasniegumu
+            reorder: Mainīt Sasniegumu Secību
+            reorder_done: Pabeigt kārtošanu
+          records:
+            title: Sasniegumi
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Vēl nav pievienots neviens sasniegums. Nospiediet "Pievienot Jaunu Sasniegumu" lai pievienotu jaunu sasniegumu.
+          achievement:
+            view_live_html: Apskatīt šo sasniegumu live <br/><em>(atveras jaunā logā)</em>
+            edit: Labot šo sasniegumu
+            delete: Izdzēst šo sasniegumu
+      achievements:
+        show:
+          other: Citi Sasniegumi
+        index:
+          place: 'Vieta'
+  activerecord:
+    attributes:
+      'refinery/achievements/achievement':
+        tournament: Turnīra nosaukums
+        country: Valsts
+        place: Iegūtā vieta
+        description: Apraksts
+        date: Datums

@@ -28,7 +28,7 @@
           <p>
             <% if blog_post_teaser_enabled? && post.custom_teaser.present? %>
               <%= link_to(refinery.blog_post_path(post), :class => 'btn btn-primary') do %>
-                Turpināt lasīt <i class="fa fa-long-arrow-right"></i>
+                <%= t('blog_continue_reading') %> <i class="fa fa-long-arrow-right"></i>
               <% end %>
             <% end %>
           </p>

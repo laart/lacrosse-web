@@ -1,0 +1,193 @@
+lv:
+  breadcrumb: "Sākums"
+  inquiry_club_location: "Mūsu atrašanās vieta"
+  inquiry_club_contacts: "Kontakti"
+  inquiry_send: "Nosūtīt"
+  galleries: "Galerijas"
+  videos: "Video"
+  blog_continue_reading: "Turpināt lasīt"
+  blog_comment_name: "Vārds"
+  blog_comment_email: "Epasts"
+  blog_comment_message: "Ziņa"
+  refinery:
+    pages:
+      home:
+        our_team: "Mūsu Komanda"
+        new_players: "Gribi izmēģināt Lakrosu?"
+        achievements: "Mūsu Sasniegumi"
+        read_more: "lasīt vairāk"
+        closest_events: "Tuvākie notikumi"
+        calendar: "Kalendārs"
+        latest_video: "Jaunākais video"
+        news_title: "Jaunumi"
+        latest_galleries: "Pēdējās Izveidotās Galerijas"
+        all_galleries: "Visas Galerijas"
+        all_videos: "Apskatīt citus Video"
+    plugins:
+      refinerycms_blog:
+        title: Jaunumi
+    blog:
+      admin:
+        categories:
+          category:
+            edit: Labot šo kategoriju
+            delete: Izdzēst šo kategoriju
+          index:
+            no_items_yet: 'Nav izveidota neviena kategorija. Nospiediet "%{create}" lai izveidotu pirmo kategoriju.'
+        comments:
+          approved: 'Komentārs no lietotāja "%{author}" ir apstiprināts.'
+          comment:
+            view_live_html: 'Apskatiet šo komentāru live <br/><em>(atveras jaunā logā)</em>'
+            read: Lasīt šo komentāru
+            reject: Noraidīt šo komentāru
+            approve: Apstiprināt šo komentāru
+          rejected: 'Komentārs no lietotāja "%{author}" ir noraidīts.'
+          index:
+            no_items_yet: 'Nav neviens %{type} komentārs'
+          show:
+            comment: Komentārs
+            blog_post: Bloga Raksts
+            from: Ievietojis
+            date: Ievietots
+            message: Komentārs
+            details: Detaļas
+            age: Vecums
+            actions: Darbības
+            back: Atpakaļ uz visiem komentāriem
+            reject: Noraidīt šo komentāru
+            approve: Apstiprināt šo komentāru
+        posts:
+          form:
+            toggle_advanced_options: Noklikšķiniet lai piekļūtu meta tagu iestatījumiem un izvēlnes (menu) opcijām
+            published_at: Publicēšanas datums
+            custom_url: Custom Url
+            custom_url_help: Ģenerēt url adresi bloga rakstam no šī teksta nevis no virsraksta.
+            source_url: Source Url
+            source_url_help: Stores the url for the source of the post material. 
+            source_url_title: Source Url Title
+            source_url_title_help: Title for the source url for the post.
+            author: Autors
+            author_help: Izvēlieties kuram lietotājam šis raksts tiks rādīts kā autoram.
+            copy_body: Kopēt Raksta Saturu uz Tīzeri
+            copy_body_help: Pārkopē raksta saturu uz tīzeri. Atstājiet tīzeri tukšu lai ļautu Sistēmai to izveidot automātiski.
+          index:
+            no_items_yet: 'Nav izveidots neviens Bloga raksts. Nospiediet "%{create}" lai pievienotu savu pirmo bloga rakstu.'
+          uncategorized:
+            no_items_yet: 'Nav neviens bloga raksts bez Kategorijas.'
+          post:
+            view_live_html: 'Apskatiet šo bloga rakstu live <br/><em>(atveras jaunā logā)</em>'
+            edit: Labot šo bloga rakstu
+            delete: Izdzēst šo bloga rakstu
+            draft: Uzmetums
+        settings:
+          notification_recipients:
+            value: Nosūtīt paziņojumu uz
+            explanation: 'Katru reizi kad kāds pievieno komentāru bloga ierakstam, Sistēma nosūta e-pastu, lai pateiktu, ka ir pievienots jauns komentārs.'
+            hint: 'Kad tiks pievienots jauns komentārs, Sistēma nosūtīs jums paziņojumu.'
+            example: "Pievienojiet savu(as) epasta adresi(es) kā: janis@inbox.lv"
+            updated: 'Paziņojumu saņēmēji ir uzstādīti kā "%{recipients}"'
+        submenu:
+          categories:
+            title: Kategorijas
+            manage: Administrēt
+            new: Izveidot jaunu kategoriju
+          comments:
+            title: Komentāri
+            title_with_count: 'Komentāri (%{new_count} jauni)'
+            new: Jauni
+            unmoderated: Jauni
+            approved: Apstiprināti
+            rejected: Noraidīti
+          posts:
+            title: Raksti
+            manage: Administrēt rakstus
+            new: Izveidot jaunu rakstu
+            uncategorized: Raksti Bez Kategorijām
+          settings:
+            title: Iestatījumi
+            moderation: Administrēšana
+            update_notified: Atjaunināt kurš tiek brīdināts
+            comments: Komentāri
+            teasers: Tīzeri
+      comment_mailer:
+        notification:
+          greeting: Sveiki
+          you_recieved_new_comment: Jūs tikko esat saņēmis jaunu komentāru LadyLacrosse mājas lapā.
+          comment_starts: --- komentāra sākums ---
+          comment_ends: --- komentāra beigas ---
+          from: No
+          email: E-pasts
+          message: Ziņa
+          approve: Apstiprināt
+          or: " vai "
+          reject: Noraidīt
+          this_comment: " šo komentāru."
+          closing_line: Sveicieni
+          ps: 'P.S. Visi jūsu komentāri tiek saglabāti sistēmā Bloga sadaļā zem "Komentāri" izvēlnes, ja jūs tos vēlēsities aplūkot vēlāk.'
+      shared:
+        categories:
+          title: Kategorijas
+        rss_feed:
+          title: RSS Feed
+          subscribe: Subscribe
+        posts:
+          other: Pēdējie Raksti
+          created_at: 'Izveidots %{when}'
+          read_more: Lasīt vairāk
+        comments:
+          singular: komentārs
+          none: nav komentāru
+        archives: Arhīvs
+        tags:
+          title: "Tagi"
+      categories:
+        show:
+          no_posts: Nav pievienots neviens raksts.
+      posts:
+        post:
+          filled_in: Aizpildīts
+        comment: komentārs
+        comments:
+          by: 'Pievienojis %{who}'
+          time_ago: 'pirms %{time}'
+          thank_you: 'Paldies par komentāru.'
+          thank_you_moderated: 'Paldies par komentāru. Jūsu ziņa drīz tiks izskatīta un apstiprināta.'
+        index:
+          no_blog_articles_yet: Vēl nav publicēts neviens Bloga raksts. Pienāciet vēlāk.
+        show:
+          blog_home: Blogs Sākums
+          comments:
+            title: Komentāri
+            add: Pievienot komentāru
+          other: Pēdējie Bloga raksti
+          filled_in: Aizpildīts
+          tagged: Tagots
+          submit: Sūtīt komentāru
+          name: Vārds
+          email: E-pasts
+          message: Ziņa
+          by: No
+          source: Source
+        tagged:
+          no_blog_articles_yet: Vēl nav publicēts neviens Bloga raksts. Pienāciet vēlāk.
+          posts_tagged: Ieraksts tagots
+        archive:
+          blog_archive_for: 'Arhīvs %{date}'
+          no_blog_articles_posted: 'Nav neviens bloga raksts, kas ir pievienots %{date}. Pienāciet vēlāk.'
+  activerecord:
+    models:
+      refinery/blog/category: Category
+      refinery/blog/comment: Comment
+      refinery/blog/post: Blog post
+    attributes:
+      refinery/blog/category:
+        title: Nosaukums
+      refinery/blog/comment:
+        name: Vārds
+        email: E-pasts
+        message: Ziņa
+      refinery/blog/post:
+        title: Nosaukums
+        body: Saturs
+        teaser: Tīzeris
+        featured_image: Sākuma attēls

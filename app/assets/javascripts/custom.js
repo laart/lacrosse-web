@@ -51,6 +51,19 @@ $(document).ready(function() {
 
 
 	hideGalleryPagination();
+
+
+	// $("a.home-other-videos-btn").hover(
+
+	// 	function(){
+	// 		$(this).css("color", "#80276c");
+	// 		$(this).css("background-color", "#ffffff");
+	// 	}, function(){
+	// 		$(this).css("color", "#333333");
+	// 	}
+
+	// );
+
 });
 
 

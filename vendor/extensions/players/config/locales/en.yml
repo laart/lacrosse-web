@@ -21,6 +21,21 @@ en:
       players:
         show:
           other: Other Players
+          player_name: 'Name'
+          player_surname: 'Surname'
+          player_email: 'Email'
+          player_age: 'Age'
+          player_position: 'Position'
+          player_number: 'Number'
+          player_height: 'Height'
+          player_city: 'City'
+          player_description: 'Player Description'
+          player_contact: 'Contact Player'
+        index:
+          season: 'Season'
+          player_name: 'Name'
+          player_surname: 'Surname'
+          player_position: 'Position'
   activerecord:
     attributes:
       'refinery/players/player':
