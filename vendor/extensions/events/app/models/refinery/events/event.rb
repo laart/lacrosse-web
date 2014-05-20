@@ -20,7 +20,8 @@ module Refinery
 		      :end => end_time.iso8601,
 		      :allDay => self.all_day,
 		      :recurring => false,
-		      :color => event_color
+		      :color => event_color,
+		      :description => self.description
 
 		      # :url => Rails.application.routes.url_helpers.event_path(id)
 		    }

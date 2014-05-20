@@ -5,10 +5,13 @@
       <div class="col-md-12">
         <ol class="breadcrumb">
 
+          <!-- Check if page is in preview -->
+          <% if @page.id %>
             <li><%= link_to t("breadcrumb"), refinery.root_path %></li>
             <% [@page.ancestors, @page].flatten.collect do |p| %>
               <li class="active"><%= link_to p.title, p.url %></li>
             <% end %>
+          <% end %>
 
         </ol>
       </div>

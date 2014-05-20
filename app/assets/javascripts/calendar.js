@@ -4,7 +4,7 @@ $(document).ready(function() {
     var d = date.getDate();
     var m = date.getMonth();
     var y = date.getFullYear();
-
+  
     $('#calendar').fullCalendar({
        
         // editable: false,
@@ -25,9 +25,27 @@ $(document).ready(function() {
         // },
 
       // http://arshaw.com/fullcalendar/docs/mouse/eventClick/
+
+      eventRender: function (event, element) {
+          element.popover({
+            placement:'auto',
+            html:true,
+            trigger : 'hover',
+            animation : 'true',
+            content : event.description,
+            container : '#calendar'
+          });
+          $('body').on('click', function (e) {
+            if (!element.is(e.target) && element.has(e.target).length === 0 && $('.popover').has(e.target).length === 0)
+                  element.popover('hide');
+          });
+      },
+
+
       eventClick: function(event, jsEvent, view){
           // window.location.replace("/events/"+event.id+"/edit");
-          alert(event.title);
+          // var descr = $(event.description).html();
+          // alert(descr);
       },
 
     });
