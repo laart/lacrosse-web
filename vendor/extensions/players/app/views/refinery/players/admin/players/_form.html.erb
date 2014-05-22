@@ -6,7 +6,7 @@
 <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts' class="player-info-tabs">
-        <% [:information, :description, :photo, :social].each_with_index do |part, part_index| %>
+        <% [:informācija, :apraksts, :attēls, :sociālie].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>'>
             <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/memories/memory", :default => part.to_s.titleize), "##{part}" %>
           </li>
@@ -14,7 +14,7 @@
       </ul>
       <div id='page_part_editors' class='player-tab-parts'>
 
-        <div class='page_part' id='information'>
+        <div class='page_part' id='informācija'>
           <div class='field'>
             <%= f.label :name -%>
             <%= f.text_field :name -%>
@@ -50,7 +50,7 @@
           </div>
         </div>
 
-        <div class='page_part' id='description'>
+        <div class='page_part' id='apraksts'>
           <div class='field'>
             <%= render '/refinery/admin/wysiwyg',
                         :f => f,
@@ -59,7 +59,7 @@
           </div>
         </div>
 
-        <div class='page_part' id='photo'>
+        <div class='page_part' id='attēls'>
           <div class='field'>
             <%= f.label :photo -%>
             <%= render '/refinery/admin/image_picker',
@@ -70,7 +70,7 @@
           </div>
         </div>
 
-        <div class='page_part' id='social'>
+        <div class='page_part' id='sociālie'>
           <div class='field'>
             <%= f.label "Twitter links" -%>
             <%= f.text_field :twitter -%>

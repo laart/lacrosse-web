@@ -12,7 +12,7 @@
   <div class='field'>
     <div id='page-tabs' class='clearfix ui-tabs ui-widget ui-widget-content ui-corner-all'>
       <ul id='page_parts'>
-        <% [:images, :description].each_with_index do |part, part_index| %>
+        <% [:attēli, :description].each_with_index do |part, part_index| %>
           <li class='ui-state-default<%= ' ui-state-active' if part_index == 0 %>' id="new-gallery-<%= part %>">
             <%= link_to t("#{part}", :scope => "activerecord.attributes.refinery/memories/memory", :default => part.to_s.titleize), "##{part}" %>
           </li>
@@ -24,7 +24,7 @@
             <%= f.text_area part, :rows => 20, :class => 'wymeditor widest' -%>
           </div>
         <% end %>
-        <div class='page_part' id="images">
+        <div class='page_part' id="attēli">
               <%= render partial: 'refinery/admin/pages/tabs/images', locals: {f: f} %>
         </div>
       </div>

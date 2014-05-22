@@ -25,9 +25,26 @@ lv:
         latest_galleries: "Pēdējās Izveidotās Galerijas"
         all_galleries: "Visas Galerijas"
         all_videos: "Apskatīt citus Video"
+    admin:
+      pages:
+        form:
+          preview: Apskatīt
+          preview_changes: Apskatīt izmaiņas pirms lapas publicēšanas
+        tabs:
+          images_bar:
+            add: Pievienot Attēlu
     plugins:
       refinerycms_blog:
         title: Jaunumi
+      refinery_page_images:
+        title: Lapas Attēli
+        tab_name: Attēli
+        description: "Lapu Attēli ļauj pievienot vienu vai vairākus attēlus jebkurai Sistēmas lapai."
+    js:
+      admin:
+        page_images:
+          add_caption: Pievienot Aprakstu
+          done: Pabeigts
     blog:
       admin:
         categories:
