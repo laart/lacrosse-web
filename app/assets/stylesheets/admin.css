@@ -20,3 +20,8 @@ input.text-field-small{
 form#new_gallery #new-gallery-description  {
 	display: none;
 }
+
+/* hide repeating event fields in new event model */
+#repeating-event-container{
+	display: none;
+}

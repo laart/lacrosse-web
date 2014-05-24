@@ -172,6 +172,7 @@ input.input-align-center{
 	text-align: center;
 }
 
-.popover{
-
+/* Event border for important events */
+.fc-event{
+	border: 2px solid;
 }
