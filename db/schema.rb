@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140512134907) do
+ActiveRecord::Schema.define(:version => 20140523163312) do
 
   create_table "refinery_achievements", :force => true do |t|
     t.string   "tournament"
@@ -107,8 +107,8 @@ ActiveRecord::Schema.define(:version => 20140512134907) do
     t.string   "title"
     t.datetime "created_at",                     :null => false
     t.datetime "updated_at",                     :null => false
-    t.datetime "start_time"
-    t.datetime "end_time"
+    t.datetime "starttime"
+    t.datetime "endtime"
     t.string   "event_type"
     t.text     "description"
     t.boolean  "all_day",     :default => false
