@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140523163312) do
+ActiveRecord::Schema.define(:version => 20140524081250) do
 
   create_table "refinery_achievements", :force => true do |t|
     t.string   "tournament"
@@ -105,13 +105,21 @@ ActiveRecord::Schema.define(:version => 20140523163312) do
 
   create_table "refinery_events", :force => true do |t|
     t.string   "title"
-    t.datetime "created_at",                     :null => false
-    t.datetime "updated_at",                     :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.datetime "starttime"
     t.datetime "endtime"
     t.string   "event_type"
     t.text     "description"
-    t.boolean  "all_day",     :default => false
+    t.boolean  "all_day",            :default => false
+    t.integer  "repeating_event_id"
+  end
+
+  create_table "refinery_events_repeating_events", :force => true do |t|
+    t.string   "repeating_event_title"
+    t.integer  "position"
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
   end
 
   create_table "refinery_galleries", :force => true do |t|

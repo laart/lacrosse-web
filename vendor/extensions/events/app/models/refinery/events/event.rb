@@ -4,9 +4,13 @@ module Refinery
     class Event < Refinery::Core::BaseModel
       self.table_name = 'refinery_events'
 
-      attr_accessible :title, :start_time, :end_time, :event_type, :description, :all_day
+      attr_accessible :title, :starttime, :endtime, :event_type, :description, :all_day, :repeating_event_id
 
       validates :title, :presence => true
+
+      belongs_to :repeating_event
+
+
 
       EVENT_TYPES = [["Treniņs", "Training"], ["Spēle", "Game"], ["Pasākums", "Party"], 
       ["Sapulce","Meeting"], ["Dzimšanas/Vārda diena" ,"Birthday"], ["Citi", "Other"]]
@@ -16,8 +20,8 @@ module Refinery
 		      :id => self.id,
 		      :title => self.title,
 		      :type => self.event_type || "",
-		      :start => start_time.iso8601,
-		      :end => end_time.iso8601,
+		      :start => starttime.iso8601,
+		      :end => endtime.iso8601,
 		      :allDay => self.all_day,
 		      :recurring => false,
 		      :color => event_color,

@@ -1,0 +1,15 @@
+<%= form_for [refinery, :events_admin, @repeating_event] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @repeating_event,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :repeating_event_title -%>
+    <%= f.text_field :repeating_event_title, :class => 'larger widest' -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.repeating_events.admin.repeating_events.repeating_event'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @repeating_event.repeating_event_title) -%>
+<% end -%>

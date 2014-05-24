@@ -1,10 +1,27 @@
 en:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: Add New Repeating Event
+            reorder: Reorder Repeating Events
+            reorder_done: Done Reordering Repeating Events
+          records:
+            title: Repeating Events
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Repeating Events yet. Click "Add New Repeating
+              Event" to add your first repeating event.
+          repeating_event:
+            view_live_html: View this repeating event live <br/><em>(opens in a new
+              window)</em>
+            edit: Edit this repeating event
+            delete: Remove this repeating event forever
         events:
           actions:
             create_new: Add New Event
@@ -13,17 +30,23 @@ en:
           records:
             title: Events
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Events yet. Click "Add New Event" to add your first event.
+            no_items_yet: There are no Events yet. Click "Add New Event" to add your
+              first event.
           event:
             view_live_html: View this event live <br/><em>(opens in a new window)</em>
             edit: Edit this event
             delete: Remove this event forever
+      repeating_events:
+        show:
+          other: Other Repeating Events
       events:
         show:
           other: Other Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

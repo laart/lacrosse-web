@@ -1,10 +1,26 @@
 zh-CN:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: 建立新的 Repeating Event
+            reorder: 对 Repeating Events 重新排序
+            reorder_done: 对 Repeating Events 的重新排序结束
+          records:
+            title: Repeating Events
+            sorry_no_results: 对不起，未找到结果。
+            no_items_yet: 目前没有 Repeating Events . 点击 "Add New Repeating Event" 创建一个repeating
+              event.
+          repeating_event:
+            view_live_html: 查看 repeating event 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 repeating event
+            delete: 永久删除 repeating event
         events:
           actions:
             create_new: 建立新的 Event
@@ -12,20 +28,23 @@ zh-CN:
             reorder_done: 对 Events 的重新排序结束
           records:
             title: Events
-            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
-
-            # There are no Events yet. Click "Add New Event" to add your first event.
+            sorry_no_results: 对不起，未找到结果。
             no_items_yet: 目前没有 Events . 点击 "Add New Event" 创建一个event.
           event:
             view_live_html: 查看 event 的最新内容.<br/><em>(新窗口中打开)</em>
             edit: 编辑 event
             delete: 永久删除 event
+      repeating_events:
+        show:
+          other: 其他 Repeating Events
       events:
         show:
           other: 其他 Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

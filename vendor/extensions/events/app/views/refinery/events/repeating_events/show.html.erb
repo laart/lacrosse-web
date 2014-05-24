@@ -1,0 +1,27 @@
+<% content_for :body_content_title do %>
+  <%= @repeating_event.repeating_event_title %>
+<% end %>
+
+<% content_for :body do %>
+  <section>
+    <h1>Repeating Event Title</h1>
+    <p>
+      <%=raw @repeating_event.repeating_event_title %>
+    </p>
+  </section>
+<% end %>
+
+<% content_for :side_body do %>
+  <aside>
+    <h2><%= t('.other') %></h2>
+    <ul id="repeating_events">
+      <% @repeating_events.each do |repeating_event| %>
+        <li>
+          <%= link_to repeating_event.repeating_event_title, refinery.events_repeating_event_path(repeating_event) %>
+        </li>
+      <% end %>
+    </ul>
+  </aside>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,11 +1,27 @@
 es:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
-#        article: masculino/femenino
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: Crear nuevo repeating event
+            reorder: Reordenar repeating events
+            reorder_done: Reordenación de repeating events completada
+          records:
+            title: Repeating Events
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay repeating events todavía. Pulsa en "Crear nuevo Repeating
+              Event" para crear tu primer repeating event.
+          repeating_event:
+            view_live_html: Ver este repeating event como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este repeating event
+            delete: Borrar este repeating event para siempre
         events:
           actions:
             create_new: Crear nuevo event
@@ -14,17 +30,24 @@ es:
           records:
             title: Events
             sorry_no_results: Lo siento, no hay resultados
-            no_items_yet: No hay events todavía. Pulsa en "Crear nuevo Event" para crear tu primer event.
+            no_items_yet: No hay events todavía. Pulsa en "Crear nuevo Event" para
+              crear tu primer event.
           event:
-            view_live_html: Ver este event como abierto al público <br/><em>(abre en ventana nueva)</em>
+            view_live_html: Ver este event como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
             edit: Editar este event
             delete: Borrar este event para siempre
+      repeating_events:
+        show:
+          other: Otros repeating events
       events:
         show:
           other: Otros events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

@@ -1,10 +1,27 @@
 nl:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: Nieuwe Repeating Event toevoegen
+            reorder: De volgorde van de Repeating Events wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Repeating Event-volgorde
+          records:
+            title: Repeating Events
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Repeating Events. Druk op 'Nieuwe Repeating
+              Event toevoegen' om de eerste toe te voegen.
+          repeating_event:
+            view_live_html: Deze repeating event op de website bekijken <br/><em>(opent
+              in een nieuw venster)</em>
+            edit: Bewerk deze repeating event
+            delete: Deze repeating event definitief verwijderen
         events:
           actions:
             create_new: Nieuwe Event toevoegen
@@ -13,17 +30,24 @@ nl:
           records:
             title: Events
             sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
-            no_items_yet: Er zijn nog geen Events. Druk op 'Nieuwe Event toevoegen' om de eerste toe te voegen.
+            no_items_yet: Er zijn nog geen Events. Druk op 'Nieuwe Event toevoegen'
+              om de eerste toe te voegen.
           event:
-            view_live_html: Deze event op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            view_live_html: Deze event op de website bekijken <br/><em>(opent in een
+              nieuw venster)</em>
             edit: Bewerk deze event
             delete: Deze event definitief verwijderen
+      repeating_events:
+        show:
+          other: Andere Repeating Events
       events:
         show:
           other: Andere Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

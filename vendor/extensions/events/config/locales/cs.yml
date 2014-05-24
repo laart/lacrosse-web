@@ -1,10 +1,27 @@
 cs:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: Přidat Repeating Event
+            reorder: Řadit Repeating Events
+            reorder_done: Konec řazení Repeating Events
+          records:
+            title: Repeating Events
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Repeating Events. Zvolte "Přidat
+              Repeating Event" pro přidání prvního repeating event.
+          repeating_event:
+            view_live_html: Zobrazit náhled repeating event<br/><em>(otevře se v novém
+              okně)</em>
+            edit: Upravit repeating event
+            delete: Smazat repeating event
         events:
           actions:
             create_new: Přidat Event
@@ -13,17 +30,23 @@ cs:
           records:
             title: Events
             sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
-            no_items_yet: Zatím nebyly vytvořeny žádné Events. Zvolte "Přidat Event" pro přidání prvního event.
+            no_items_yet: Zatím nebyly vytvořeny žádné Events. Zvolte "Přidat Event"
+              pro přidání prvního event.
           event:
             view_live_html: Zobrazit náhled event<br/><em>(otevře se v novém okně)</em>
             edit: Upravit event
             delete: Smazat event
+      repeating_events:
+        show:
+          other: Další Repeating Events
       events:
         show:
           other: Další Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

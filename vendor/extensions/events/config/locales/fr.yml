@@ -1,10 +1,28 @@
 fr:
   refinery:
     plugins:
+      repeating_events:
+        title: Repeating Events
       events:
         title: Events
     events:
       admin:
+        repeating_events:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Repeating Event
+            reorder: Réordonner les Repeating Events
+            reorder_done: Fin de réordonnancement des Repeating Events
+          records:
+            title: Repeating Events
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Repeating Event. Cliquer
+              sur "Créer un(e) nouve(au/l/lle) Repeating Event" pour créer votre premi(er/ère)
+              repeating event.
+          repeating_event:
+            view_live_html: Voir ce(t/tte) repeating event <br/><em>(Ouvre une nouvelle
+              fenêtre)</em>
+            edit: Modifier ce(t/tte) repeating event
+            delete: Supprimer définitivement ce(t/tte) repeating event
         events:
           actions:
             create_new: Créer un(e) nouve(au/l/lle) Event
@@ -12,18 +30,24 @@ fr:
             reorder_done: Fin de réordonnancement des Events
           records:
             title: Events
-            sorry_no_results: "Désolé ! Aucun résultat."
-            no_items_yet: 'Il n''y a actuellement aucun(e) Event. Cliquer sur "Créer un(e) nouve(au/l/lle) Event" pour créer votre premi(er/ère) event.'
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Event. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Event" pour créer votre premi(er/ère) event.
           event:
             view_live_html: Voir ce(t/tte) event <br/><em>(Ouvre une nouvelle fenêtre)</em>
             edit: Modifier ce(t/tte) event
             delete: Supprimer définitivement ce(t/tte) event
+      repeating_events:
+        show:
+          other: Autres Repeating Events
       events:
         show:
           other: Autres Events
   activerecord:
     attributes:
-      'refinery/events/event':
+      refinery/events/repeating_event:
+        repeating_event_title: Repeating Event Title
+      refinery/events/event:
         title: Title
         date: Date
         photo: Photo

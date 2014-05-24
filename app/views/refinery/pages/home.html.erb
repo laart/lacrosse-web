@@ -30,10 +30,10 @@
               <ul>
                 <% @events.each do |event| %>
                 <li class="item event-item">
-                  <div class="event-date"> <span class="date"><%= event.start_time.strftime("%d") %></span> <span class="month"><%= l(event.start_time, :format => "%b") %></span> </div>
+                  <div class="event-date"> <span class="date"><%= event.starttime.strftime("%d") %></span> <span class="month"><%= l(event.starttime, :format => "%b") %></span> </div>
                   <div class="event-detail">
                     <h4><%= link_to event.title, refinery.events_events_path %></a></h4>
-                    <span class="event-dayntime meta-data"><%= l(event.start_time, :format => "%A") %> | <%= event.start_time.strftime("%H:%M") %></span> </div>
+                    <span class="event-dayntime meta-data"><%= l(event.starttime, :format => "%A") %> | <%= event.starttime.strftime("%H:%M") %></span> </div>
                   <div class="to-event-url">
                     <div><%= link_to t('.calendar'), refinery.events_events_path, class: "btn btn-default btn-sm" %></div>
                   </div>

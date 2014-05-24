@@ -9,13 +9,18 @@
   </div>
 
   <div class='field'>
-    <%= f.label :start_time -%>
-    <%= f.datetime_select :start_time -%>
+    <%= f.label :starttime -%>
+    <%= f.datetime_select :starttime -%>
   </div>
 
   <div class='field'>
-    <%= f.label :end_time -%>
-    <%= f.datetime_select :end_time -%>
+    <%= f.label :endtime -%>
+    <%= f.datetime_select :endtime -%>
+  </div>
+
+  <div class="field">
+    <%= f.label :repeating_event -%>
+    <%= f.select(:repeating_event_id, @repeating_events.collect {|d| [d.repeating_event_title, d.id] })%>
   </div>
 
   <div class='field'>
