@@ -33,7 +33,14 @@
                   <div class="event-date"> <span class="date"><%= event.starttime.strftime("%d") %></span> <span class="month"><%= l(event.starttime, :format => "%b") %></span> </div>
                   <div class="event-detail">
                     <h4><%= link_to event.title, refinery.events_events_path %></a></h4>
-                    <span class="event-dayntime meta-data"><%= l(event.starttime, :format => "%A") %> | <%= event.starttime.strftime("%H:%M") %></span> </div>
+                    <span class="event-dayntime meta-data"><%= l(event.starttime, :format => "%A") %> | 
+                      <% if event.all_day %>
+                      <%= t('.all_day') %>
+                      <% else %>
+                      <%= event.starttime.strftime("%H:%M") %>
+                      <% end %>
+                    </span> 
+                  </div>
                   <div class="to-event-url">
                     <div><%= link_to t('.calendar'), refinery.events_events_path, class: "btn btn-default btn-sm" %></div>
                   </div>
@@ -80,11 +87,10 @@
             <section class="listing-cont">
               <ul>
                 <li class="item sermon featured-sermon"> <span class="date"><%= l(@video.created_at.to_date, :format => :long)%></span>
-                  <h4><a href="single-sermon.html"><%= @video.title %></a></h4>
+                  <h4 class="homepage-video-title"><%= @video.title %></h4>
                   <div class="featured-sermon-video format-video"> 
                     <%= link_to image_tag(@video.featured_image.thumbnail(geometry: "600x400#c").url), @video.url, "data-rel" => "prettyPhoto", class: "media-box" %>
                   </div>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
                   <div class="sermon-actions video-center">
                     <%= link_to refinery.videos_videos_path, class: "btn btn-default btn-lg home-other-videos-btn" do %>
                       <span><i class="fa fa-video-camera fa-2x"></i> <%= t('.all_videos') %></span>

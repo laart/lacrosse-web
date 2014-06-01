@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140524084344) do
+ActiveRecord::Schema.define(:version => 20140601154843) do
 
   create_table "refinery_achievements", :force => true do |t|
     t.string   "tournament"
@@ -354,7 +354,6 @@ ActiveRecord::Schema.define(:version => 20140524084344) do
 
   create_table "refinery_videos", :force => true do |t|
     t.string   "title"
-    t.string   "description"
     t.string   "url"
     t.integer  "position"
     t.datetime "created_at",        :null => false

@@ -13,6 +13,7 @@ en:
   blog_comment_email: "Email"
   blog_comment_message: "Message"
   sponsors_title: "Sponsors"
+  support: "Support"
   footer_about: "About"
   refinery:
     pages:
@@ -28,3 +29,4 @@ en:
         latest_galleries: "Latest Galleries"
         all_galleries: "All galleries"
         all_videos: "Watch other Videos"
+        all_day: "all day"

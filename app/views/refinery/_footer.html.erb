@@ -3,7 +3,7 @@
       <div class="row"> 
         <!-- Start Footer Widgets -->
         <div class="col-md-4 col-sm-4 widget footer-widget">
-          <h4 class="footer-widget-title"><%= t('footer_about')  %> LadyLacrosse</h4>
+          <h4 class="footer-widget-title"><%= t('footer_about') %> LadyLacrosse</h4>
           <%= image_tag("logo.png", alt: "logo") %>
           <div class="spacer-20"></div>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis consectetur adipiscing elit. Nulla convallis egestas rhoncus</p>
@@ -15,7 +15,7 @@
             <li><%= link_to "LadyLaxi", "http://www.ladytaxi.lv", :target => "_blank" %></li>
             <li><%= link_to "LSPA", "http://www.lspa.eu", :target => "_blank"  %></li>
             <li><%= link_to "Humulus", "http://www.humulus.lv", :target => "_blank" %></li>
-            <li><%= link_to "RPV Hostings", "http://www.rpv.lv", :target => "_blank" %></li>
+            <li><h4><%= t('support') %> </h4><%= link_to "RPV Hostings", "http://www.rpv.lv", :target => "_blank" %></li>
           </ul>
         </div>
         <div class="col-md-4 col-sm-4 widget footer-widget">
@@ -29,7 +29,7 @@
       <div class="row">
         <div class="copyrights-col-left col-md-6 col-sm-6">
           <p><%= t('.copyright', :year => Time.now.year,
-                      :site_name => Refinery::Core.site_name) %>. All Rights Reserved</p>
+                      :site_name => Refinery::Core.site_name) %>.</p>
         </div>
         <div class="copyrights-col-right col-md-6 col-sm-6">
           <div class="social-icons"> <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a> <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a> <a href="http://www.pinterest.com/" target="_blank"><i class="fa fa-pinterest"></i></a> <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus"></i></a> <a href="http://www.pinterest.com/" target="_blank"><i class="fa fa-youtube"></i></a> <a href="#"><i class="fa fa-rss"></i></a> </div>

@@ -172,6 +172,12 @@ input.input-align-center{
 	text-align: center;
 }
 
+h4.homepage-video-title{
+	color: #80276c;
+}
+
+
+
 /* Event border for important events */
 .fc-event{
 	border: 2px solid;

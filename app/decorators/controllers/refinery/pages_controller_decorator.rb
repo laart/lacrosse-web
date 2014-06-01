@@ -7,7 +7,7 @@ Refinery::PagesController.class_eval do
     end
 
     def find_events
-    	@events = Refinery::Events::Event.limit(3).order('starttime desc')
+    	@events = Refinery::Events::Event.where("starttime >= ?", Date.today).limit(3).order('starttime asc')
     end
 
     def find_blog_posts

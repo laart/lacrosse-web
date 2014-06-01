@@ -10,6 +10,7 @@ lv:
   blog_comment_email: "Epasts"
   blog_comment_message: "Ziņa"
   sponsors_title: "Sponsori"
+  support: "Atbalsta"
   footer_about: "Par"
   refinery:
     pages:
@@ -25,6 +26,7 @@ lv:
         latest_galleries: "Pēdējās Izveidotās Galerijas"
         all_galleries: "Visas Galerijas"
         all_videos: "Apskatīt citus Video"
+        all_day: "visu dienu"
     admin:
       pages:
         form:

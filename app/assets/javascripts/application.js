@@ -21,6 +21,5 @@
 //= require init
 //= require helper-plugins
 //= require jquery.flexslider
-//= require messages_lv
 //= require modernizr
 //= require custom

@@ -14,5 +14,11 @@
 <% end %>
 
 <%= javascript_include_tag 'application' %>
+
+<!-- Load lv validation messages if lv language is selected -->
+<% if I18n.locale == :lv %>
+	<%= javascript_include_tag 'messages_lv' %>
+<% end %>
+
 <%= yield :javascripts -%>
 <%= yield(:head) %>
