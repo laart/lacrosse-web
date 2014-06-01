@@ -1,0 +1,62 @@
+en:
+  refinery:
+    plugins:
+      repeating_events:
+        title: Atkārtojošie notikumi
+      events:
+        title: Notikumi
+    events:
+      admin:
+        repeating_events:
+          actions:
+            create_new: Pievienot jaunu Atkārtojošo Notikumu
+          records:
+            title: Repeating Events
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Repeating Events yet. Click Add New Repeating Event to add your first repeating event.
+          repeating_event:
+            view_live_html: View this repeating event live <br/><em>(opens in a new window)</em>
+            edit: Edit this repeating event
+            delete: Remove this repeating event forever
+          show:
+            edit: Labot šo notikumu
+            delete: Dzēst šo notikumu
+            delete_event: Dzēst atkārtojošo notikumu un visus tam piesaistītos notikumus
+        events:
+          actions:
+            create_new: Izveidot Jaunu Notikumu
+          records:
+            title: Notikumi
+            sorry_no_results: Atvainojiet! Neviens ieraksts netika atrasts.
+            no_items_yet: Šobrīd nav izveidots neviens Notikums. Nospiediet "Pievienot Jaunu Notikumu" lai pievienotu pirmo notikumu.
+          events:
+            edit: Labot šo notikumu
+            delete: Dzēst šo notikumu
+          event:
+            delete: Dzēst šo notikumu
+          repeating_events:
+            view_repeating_event: Apskatīt atkārtojošo notikumu
+            delete: Dzēst atkārtojošo notikumu un visus tam piesaistītos notikumus
+      repeating_events:
+        show:
+          edit: Labot šo notikumu
+          delete: Dzēst šo notikumu
+          delete_event: Dzēst atkārtojošo notikumu un visus tam piesaistītos notikumus
+  activerecord:
+    attributes:
+      refinery/events/repeating_event:
+        repeating_event_title: Atkārtojošā Notikuma nosaukums
+        starttime: Sākuma laiks
+        endtime: Beigu laiks
+        frequency: Atkārtošanās biežums
+        period: Atkārtošanās periods
+        all_day: Visas dienas notikums?
+      refinery/events/event:
+        title: Nosaukums
+        starttime: Sākuma laiks
+        endtime: Beigu laiks
+        event_type: Notikuma veids
+        repeating_event_title: Atkārtojošā Notikuma nosaukums
+        description: Apraksts
+        all_day: Visas dienas notikums?
+        important: Svarīgs notikums?

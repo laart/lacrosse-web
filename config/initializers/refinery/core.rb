@@ -38,10 +38,14 @@ Refinery::Core.configure do |config|
   # config.wymeditor_whitelist_tags = {}
 
   # Register extra javascript for backend
+  config.register_javascript "jquery.validate.min"
+  config.register_javascript "messages_lv"
+  config.register_javascript "jquery.datetimepicker"
   config.register_javascript "events"
 
   # Register extra stylesheet for backend (optional options)
   config.register_stylesheet "admin", :media => 'screen'
+  config.register_stylesheet "jquery.datetimepicker", :media => 'screen'
 
   # Specify a different backend path than the default of /refinery.
   # config.backend_route = "refinery"

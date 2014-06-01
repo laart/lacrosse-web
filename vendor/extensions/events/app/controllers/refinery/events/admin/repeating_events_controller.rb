@@ -3,9 +3,20 @@ module Refinery
     module Admin
       class RepeatingEventsController < ::Refinery::AdminController
 
-        crudify :'refinery/events/repeating_event',
-                :title_attribute => 'repeating_event_title',
-                :xhr_paging => true
+
+      	def show
+      		@repeating_event = Refinery::Events::RepeatingEvent.find(params[:id])
+      	end
+
+      	 def index
+      		@repeating_events = Refinery::Events::RepeatingEvent.all
+      	end
+
+        def destroy
+          @repeating_event = Refinery::Events::RepeatingEvent.find(params[:id])
+          @repeating_event.destroy
+          redirect_to refinery.events_admin_events_path, :flash => { :notice => "Atkartojosais notikums veiksmigi dzests" }
+        end
 
       end
     end

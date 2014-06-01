@@ -4,14 +4,16 @@
   <% @events.each do |event| %>
     <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(event) -%>">
       <span class='title'>
-        <%= event.title %>
-
+        <b><%= event.title %></b>
+        <% if event.all_day %>
+          - <%= event.starttime.strftime("%d/%m/%Y") %>
+          - <%= event.endtime.strftime("%d/%m/%Y") %>
+        <% else %>
+          - <%= event.starttime.strftime("%d/%m/%Y %H:%M") %>
+          - <%= event.endtime.strftime("%d/%m/%Y %H:%M") %>        
+        <% end %>
       </span>
       <span class='actions'>
-        
-        <%= link_to refinery_icon_tag("application_go.png"), refinery.events_event_path(event),
-            :title => t('.view_live_html'),
-            :target => "_blank" %>
         
         <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_events_admin_event_path(event),
              :title => t('.edit') %>

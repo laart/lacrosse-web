@@ -25,7 +25,7 @@ Refinery::Core::Engine.routes.draw do
   # Admin routes
   namespace :events, :path => '' do
     namespace :admin, :path => "#{Refinery::Core.backend_route}/events" do
-      resources :repeating_events, :except => :show do
+      resources :repeating_events do
         collection do
           post :update_positions
         end

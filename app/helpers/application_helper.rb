@@ -1,3 +1,4 @@
+#encoding: utf-8
 module ApplicationHelper
 
 	#bootstrap dropdown fix
@@ -23,6 +24,19 @@ module ApplicationHelper
 	#URL halper for player social links
 	def url_with_protocol(url)
     /^http/.match(url) ? url : "http://#{url}"
+  end
+
+  #Translate Repeating event period to lv
+  def repeating_event_period(period)
+	 	if period == "Daily"
+	   	"dienu"
+	  elsif period == "Weekly"
+	    "nedēļu"
+	  elsif period == "Monthly"
+	   	"mēnesi"
+	  elsif period == "Yearly"
+	    "gadu"
+	  end
   end
 
 end

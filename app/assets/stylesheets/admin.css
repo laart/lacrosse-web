@@ -25,3 +25,20 @@ form#new_gallery #new-gallery-description  {
 #repeating-event-container{
 	display: none;
 }
+
+
+label.error{
+	font-family: "Roboto", sans-serif;
+/*	position: absolute;*/
+/*	margin-top: -20px;*/
+	margin-bottom: 10px;
+	color: red;
+}
+
+input.error, select.error, textarea.error{
+  border: 1px solid red !important;
+}
+
+.label-inline{
+	display: inline-block;
+}

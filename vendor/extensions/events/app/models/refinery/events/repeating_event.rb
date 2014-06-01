@@ -8,6 +8,8 @@ module Refinery
 
       has_many :events, :dependent => :destroy
 
+    	# validates :repeating_event_title, :title, :presence => true
+
 		  after_create :create_events_until_end_time
 
 		  def create_events_until_end_time(end_time=END_TIME)

@@ -10,33 +10,34 @@
 
   <div class='field'>
     <%= f.label :starttime -%>
-    <%= f.datetime_select :starttime -%>
+    <%= f.text_field :starttime, :value => @event.starttime.strftime("%Y/%m/%d %H:%M") -%>
   </div>
 
   <div class='field'>
     <%= f.label :endtime -%>
-    <%= f.datetime_select :endtime -%>
+    <%= f.text_field :endtime, :value => @event.endtime.strftime("%Y/%m/%d %H:%M") -%>
   </div>
 
   <div class='field'>
-    <%= f.label :all_day -%>
+    <%= f.label :all_day, class: "label-inline" -%>
     <%=f.check_box :all_day %>
   </div>
 
   <div class="field">
+    <%= f.label "Notikuma Veids", class: "label-inline" -%>
     <%= f.select :event_type, options_for_select(Refinery::Events::Event::EVENT_TYPES) %>
   </div>
 
   <div class='field'>
-    <%= f.label :important -%>
+    <%= f.label :important, class: "label-inline" -%>
     <%=f.check_box :important %>
   </div>
 
 
   <!-- Repeating Event -->
 
-  <div class="field">
-    <%= label_tag 'Repeating event?' %>
+  <div class="field repeating-event-checkbox">
+    <%= label_tag 'Akārtojošais notikums?',nil, class: "label-inline" %>
     <%= check_box_tag 'repeating event' %>
   </div>
 
@@ -47,11 +48,13 @@
     </div>
 
     <div class="field">
-      <%= f.select :period, Refinery::Events::Event::REPEATS %>
+      <%= f.label "Atkārtojas", class: "label-inline" -%>
+      <%= f.select :period, options_for_select(Refinery::Events::Event::REPEATS) %>
     </div>
 
     <div class="field">
-      <%=f.select :frequency, (1..30).to_a %>
+      <%= f.label "Atkārtojas katru", class: "label-inline" -%>
+      <%=f.select :frequency, (1..30).to_a %>. <span id="event-freaquency"></span>
     </div>
   </div>
 

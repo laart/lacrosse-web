@@ -5,15 +5,22 @@ module Refinery
       self.table_name = 'refinery_events'
 
       attr_accessor :period, :frequency, :repeating_event_title, :commit_button
-      attr_accessible :title, :starttime, :endtime, :event_type, :description, :all_day, :repeating_event_id, :important, :period
+      attr_accessible :title, :starttime, :endtime, :event_type, :description, :all_day, :repeating_event_id, :important, :period, :frequency, :repeating_event_title
 
-      validates :title, :presence => true
-
+      validates :title, :starttime, :endtime, :presence => true
+      # validate :validate_timings
+      
       belongs_to :repeating_event
 
 
-      EVENT_TYPES = [["Treniņs", "Training"], ["Spēle", "Game"], ["Pasākums", "Party"], 
-      ["Sapulce","Meeting"], ["Dzimšanas/Vārda diena" ,"Birthday"], ["Citi", "Other"]]
+      EVENT_TYPES = [
+      								["Treniņš", "Training"]							 ,
+      								["Spēle", "Game"]										 ,
+      								["Pasākums", "Party"]								 ,
+      								["Sapulce","Meeting"]								 , 
+      								["Dzimšanas/Vārda diena" ,"Birthday"], 
+      								["Citi", "Other"]
+      ]
 
       def as_json(options = {})
 		    {
@@ -31,12 +38,18 @@ module Refinery
 		    }
   		end
 
+ 		 #  def validate_timings
+		  #   if (starttime >= endtime) and !all_day
+		  #     errors[:base] << "Sākuma Laikam jābūt mazākam par Beigu laiku"
+		  #   end
+		  # end
+
   		REPEATS = [
-		              "Does not repeat",
-		              "Daily"          ,
-		              "Weekly"         ,
-		              "Monthly"        ,
-		              "Yearly"         
+		              ["Neatkārtojas", "Does not repeat"],
+		              ["Dienas", "Daily"]           ,
+		              ["Nedēļas","Weekly"]          ,
+		              ["Mēneši","Monthly"]         ,
+		              ["Gadi","Yearly"]         
 		  ]
 
   		def event_color

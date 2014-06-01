@@ -1,0 +1,68 @@
+<% if @repeating_event.events.any? %>
+
+	<section id='records'>
+		<h1>Atkārtojošais notikums - <%= @repeating_event.repeating_event_title %></h1>
+		<div class='pagination_container'>
+
+	  <ul id='sortable_list'>
+	  	<% @repeating_event.events.each do |event| %>
+				<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(event) -%>">
+				  <span class='title'>
+	        <b><%= event.title %></b>
+	        <% if event.all_day %>
+	          - <%= event.starttime.strftime("%d/%m/%Y") %>
+	          - <%= event.endtime.strftime("%d/%m/%Y") %>
+	        <% else %>
+	          - <%= event.starttime.strftime("%d/%m/%Y %H:%M") %>
+	          - <%= event.endtime.strftime("%d/%m/%Y %H:%M") %>        
+	        <% end %>
+				  </span>
+				  <span class='actions'>
+				    	    
+				    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_events_admin_event_path(event),
+				         :title => t('.edit') %>
+				    <%= link_to refinery_icon_tag("delete.png"), refinery.events_admin_event_path(event),
+				        :class => "cancel confirm-delete",
+				        :title => t('.delete'),
+				        :confirm => t('message', :scope => 'refinery.admin.delete', :title => event.title),
+				        :method => :delete %>
+				  </span>
+				</li>
+			<% end %>
+		<ul>
+		</div>
+	</section>
+
+	<aside id='actions'>
+		<h1>Informācija</h1>
+		<ul>
+			<li>
+				<b>Nosaukums:</b> <%= @repeating_event.repeating_event_title %>
+			</li>
+
+			<% if @repeating_event.all_day %>
+				<li><b>Visu dienu:</b> <%= @repeating_event.starttime.strftime("%d/%m/%Y") %></li>
+			<% else %>
+				<li>
+					<b>Sākuma laiks:</b> <%= @repeating_event.starttime.strftime("%d/%m/%Y %H:%M") %>
+				</li>
+				<li>
+					<b>Beigu laiks:</b> <%= @repeating_event.endtime.strftime("%d/%m/%Y %H:%M") %>
+				</li>
+			<% end %>
+			<li>
+				<b>Atkārtojas:</b> katru <%= @repeating_event.frequency %>. 
+				<%= repeating_event_period(@repeating_event.period) %>
+			</li>
+		  <li>
+		  	<!-- Dzēst Notikumu un Apakšnotikumus -->
+		    <%= link_to t('.delete_event'), refinery.events_admin_repeating_event_path(@repeating_event),
+	        :class => "cancel confirm-delete delete_icon",
+	        :title => t('.delete'),
+	        :confirm => t('message', :scope => 'refinery.admin.delete', :title => @repeating_event.repeating_event_title),
+	        :method => :delete %>		    	
+		  </li>
+		</ul>
+	</aside>
+
+<% end %>

@@ -15,11 +15,9 @@ en:
           records:
             title: Repeating Events
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Repeating Events yet. Click "Add New Repeating
-              Event" to add your first repeating event.
+            no_items_yet: There are no Repeating Events yet. Click Add New Repeating Event to add your first repeating event.
           repeating_event:
-            view_live_html: View this repeating event live <br/><em>(opens in a new
-              window)</em>
+            view_live_html: View this repeating event live <br/><em>(opens in a new window)</em>
             edit: Edit this repeating event
             delete: Remove this repeating event forever
         events:
@@ -30,8 +28,7 @@ en:
           records:
             title: Events
             sorry_no_results: Sorry! There are no results found.
-            no_items_yet: There are no Events yet. Click "Add New Event" to add your
-              first event.
+            no_items_yet: There are no Events yet. Click "Add New Event" to add your first event.
           event:
             view_live_html: View this event live <br/><em>(opens in a new window)</em>
             edit: Edit this event
@@ -42,12 +39,22 @@ en:
       events:
         show:
           other: Other Events
+          edit: Edit
   activerecord:
     attributes:
       refinery/events/repeating_event:
         repeating_event_title: Repeating Event Title
+        starttime: Start time
+        endtime: End time
+        frequency: Frequency
+        period: Period
+        all_day: All day event?
       refinery/events/event:
-        title: Title
-        date: Date
-        photo: Photo
-        blurb: Blurb
+        title: Tile
+        starttime: Start time
+        endtime: End time
+        event_type: Event Type
+        repeating_event_title: Repeating Event Title
+        description: Description
+        all_day: All day event?
+        important: Important event?

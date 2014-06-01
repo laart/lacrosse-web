@@ -1,5 +1,11 @@
 <div class='pagination_container'>
   <% if @events.any? %>
+  <h1>Parastie Notikumi</h1>
     <%= render 'events' %>
+  <% end %>
+
+  <% if @repeating_events.any? %>
+  <h1>Atkārtojošie Notikumi</h1>
+  	<%= render 'repeating_events' %>
   <% end %>
 </div>

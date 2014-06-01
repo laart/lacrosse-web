@@ -1,0 +1,29 @@
+<ul id='sortable_list'>
+  <% @repeating_events.each do |repeating_event| %>
+    <li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(repeating_event) -%>">
+      <span class='title'>
+        <b><%= repeating_event.repeating_event_title %></b>
+        <% if repeating_event.all_day %>
+        - <%= repeating_event.starttime.strftime("%d/%m/%Y") %>
+        <% else %>
+        - <%= repeating_event.starttime.strftime("%d/%m/%Y %H:%M") %>
+        <% end %>
+        | <b>Atkārtojas</b> - <i>Katru <%= repeating_event.frequency %>. 
+        <%= repeating_event_period(repeating_event.period) %>
+      </span>
+      <span class='actions'>
+        
+        <%= link_to refinery_icon_tag("application_go.png"), refinery.events_admin_repeating_event_path(repeating_event),
+            :title => t('.view_repeating_event') %>
+        
+        <%#= link_to refinery_icon_tag("application_edit.png"), refinery.edit_events_admin_event_path(event),
+             :title => t('.edit') %>
+        <%= link_to refinery_icon_tag("delete.png"), refinery.events_admin_repeating_event_path(repeating_event),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :confirm => t('message', :scope => 'refinery.admin.delete', :title => repeating_event.repeating_event_title),
+        :method => :delete %>
+      </span>
+    </li>
+  <% end %>
+</ul>
