@@ -16,6 +16,7 @@ module Refinery
             :title => 'repeating_event_title'
           }
           plugin.menu_match = %r{refinery/events/repeating_events(/.*)?$}
+          plugin.hide_from_menu = true
         end
       end
 
